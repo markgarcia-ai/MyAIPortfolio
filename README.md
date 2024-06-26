@@ -10,4 +10,8 @@ It
 +----4 Run 06_FinalResults.py -> Select the best stocks to invest. 
 +-----5 Run 07_PortfolioUpdate.py -> Check current portfolio
 
+# Running docker
+
+
+
 # WebServer
