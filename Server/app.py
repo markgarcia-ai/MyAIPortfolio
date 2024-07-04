@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from classes.graph import GraphManager
 import yfinance as yf
 import pandas as pd
 
 app = Flask(__name__)
+graph_manager = GraphManager('data.json')
 
 def get_sp500_stocks():
     # Download S&P 500 data
@@ -17,9 +19,16 @@ def get_best_stocks():
     best_stocks = stock_data.sort_values(ascending=False).head(3)
     return best_stocks.index.tolist()
 
+@app.route('/add', methods=['POST'])
+def add_data():
+    new_data = request.json
+    graph_manager.add_data(new_data)
+    return jsonify(success=True)
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    data = graph_manager.get_data()
+    return render_template('index.html', data=data)
 
 @app.route('/invest', methods=['POST'])
 def invest():
@@ -48,4 +57,4 @@ def invest():
     return render_template('results.html', options=investment_options)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8000)
