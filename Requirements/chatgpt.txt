@@ -1,0 +1,13 @@
+Can you create a Python Script which downloads next finance data:
+TMNLS U.S. Eq Ldrs I/A GBP
+3I Group PLC ORD 73 19/22P
+Molina Healthcare Common Stock
+JPM US Select C Acc
+Novocure Limited Ordinary Shares
+NVIDIA Corp Common Shares
+BigBearai Holdings Ordinary Shares
+Microsoft Corp Common Shares
+ASM Holding
+After, it uses an array where user can put the quantity value per each investment and with that 
+It creates a table with a row for each data point showing name, current value, quantity and final investment value mutiplyling the current value and the quantity. 
+Also, put the investments in array

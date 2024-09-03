@@ -1,0 +1,39 @@
+{
+    "date": "2024-01-01",
+    "portfolio_value": 100000,
+    "portfolio_invested": 85000,
+    "investments": {
+      "funds": [
+        {
+          "name": "Fund A",
+          "quantity": 100,
+          "total_value": 25000
+        },
+        {
+          "name": "Fund B",
+          "quantity": 50,
+          "total_value": 12500
+        }
+      ],
+      "etfs": [
+        {
+          "name": "ETF A",
+          "quantity": 200,
+          "total_value": 20000
+        }
+      ],
+      "stocks": [
+        {
+          "name": "Stock A",
+          "quantity": 150,
+          "total_value": 30000
+        },
+        {
+          "name": "Stock B",
+          "quantity": 100,
+          "total_value": 12500
+        }
+      ]
+    }
+  }
+  

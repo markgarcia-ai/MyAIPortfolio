@@ -1,7 +1,10 @@
 # MyAIPortfolio
 
 MyAIPortfolio is a web base AI to help you on your portfolio.
-It 
+It's divided in three sections: 
+1-Display current portofolio gains 
+2-Display AI portfolio assessment
+3-Display potential stocks to invest and update portfolio
 
 # Python Files
 +-1 Run 01_download_data.py -> Current data for all stocks
@@ -15,3 +18,7 @@ It
 
 
 # WebServer
+
+
+## Requirements:
+
