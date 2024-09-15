@@ -1,0 +1,102 @@
+Symbol,Company Name,Sector,Market Cap,52-Week High,52-Week Low,Average Price,Previous Close
+ADBE,Adobe Inc.,Information Technology,238048149504,638.25,433.97,536.11,586.55
+AMD,Advanced Micro Devices,Information Technology,246510682112,227.3,93.12,160.21,150.77
+ABNB,Airbnb,Consumer Discretionary,74467803136,170.1,110.38,140.24,117.36
+GOOGL,Alphabet Inc. (Class A),Communication Services,1943418568704,191.75,120.21,155.98,154.69
+GOOG,Alphabet Inc. (Class C),Communication Services,1943421583360,193.31,121.46,157.385,155.54
+AMZN,Amazon,Consumer Discretionary,1957324390400,201.2,118.35,159.77499999999998,187.0
+AEP,American Electric Power,Utilities,55430938624,104.41,69.38,86.895,102.99
+AMGN,Amgen,Health Care,178635046912,346.85,249.7,298.275,330.06
+ADI,Analog Devices,Information Technology,111919448064,244.14,154.99,199.565,221.53
+ANSS,Ansys,Information Technology,27833507840,364.31,258.01,311.15999999999997,319.13
+AAPL,Apple Inc.,Information Technology,3382912221184,237.23,164.08,200.655,222.77
+AMAT,Applied Materials,Information Technology,155375419392,255.89,129.21,192.55,183.21
+ARM,Arm Holdings,Information Technology,154443759616,188.75,46.5,117.625,139.18
+ASML,ASML Holding,Information Technology,320992739328,1110.09,564.0,837.045,800.17
+AZN,AstraZeneca,Health Care,243562135552,87.68,60.47,74.075,78.96
+TEAM,Atlassian,Information Technology,42576986112,258.69,135.29,196.99,165.69
+ADSK,Autodesk,Information Technology,56885751808,279.53,192.01,235.76999999999998,259.47
+ADP,Automatic Data Processing,Industrials,113167196160,279.58,205.53,242.555,277.0
+BKR,Baker Hughes,Energy,33414029312,39.05,28.32,33.685,33.29
+BIIB,Biogen,Health Care,28495857664,269.43,189.44,229.435,197.89
+BKNG,Booking Holdings,Consumer Discretionary,131837722624,4144.32,2733.04,3438.68,3870.7
+AVGO,Broadcom Inc.,Information Technology,783209594880,185.162,79.509,132.3355,164.56
+CDNS,Cadence Design Systems,Information Technology,73580912640,328.99,227.05,278.02,269.9
+CDW,CDW Corporation,Information Technology,29406754816,263.37,185.04,224.20499999999998,218.64
+CHTR,Charter Communications,Communication Services,48556204032,458.3,236.08,347.19,339.03
+CTAS,Cintas,Industrials,83747102720,209.12,118.685,163.9025,206.02
+CSCO,Cisco,Information Technology,198738345984,56.28,44.5,50.39,49.61
+CCEP,Coca-Cola Europacific Partners,Consumer Staples,37538816000,82.14,56.28,69.21000000000001,80.63
+CTSH,Cognizant,Information Technology,38269751296,80.27,62.14,71.205,76.31
+CMCSA,Comcast,Communication Services,153157369856,47.11,36.43,41.769999999999996,39.31
+CEG,Constellation Energy,Utilities,61280788480,236.3,102.405,169.35250000000002,189.93
+CPRT,Copart,Industrials,48336228352,58.58,42.41,50.495,49.47
+CSGP,CoStar Group,Real Estate,32322267136,100.38,67.35,83.865,77.97
+COST,Costco,Consumer Staples,406094872576,923.83,540.23,732.03,915.03
+CRWD,CrowdStrike,Information Technology,63519502336,398.327,157.59,277.9585,257.1
+CSX,CSX Corporation,Industrials,64986566656,40.12,29.03,34.575,33.45
+DDOG,Datadog,Information Technology,36837228544,138.61,77.81,108.21000000000001,109.63
+DXCM,DexCom,Health Care,27854534656,142.0,62.34,102.17,68.82
+FANG,Diamondback Energy,Energy,50983563264,214.5,143.08,178.79000000000002,170.86
+DLTR,Dollar Tree,Consumer Staples,14984941568,151.22,60.82,106.02,67.89
+DASH,DoorDash,Consumer Discretionary,54055911424,143.34,69.9,106.62,130.19
+EA,Electronic Arts,Communication Services,38528286720,153.51,117.47,135.49,144.75
+EXC,Exelon,Utilities,40250114048,41.82,33.35,37.585,39.86
+FAST,Fastenal,Industrials,39982145536,79.04,53.83,66.435,69.82
+FTNT,Fortinet,Information Technology,57375752192,78.08,44.12,61.099999999999994,74.49
+GEHC,GE HealthCare,Health Care,39688499200,94.5,62.35,78.425,87.46
+GILD,Gilead Sciences,Health Care,103097614336,87.87,62.07,74.97,82.39
+GFS,GlobalFoundries,Information Technology,21933135872,62.61,39.12,50.864999999999995,39.89
+HON,Honeywell,Industrials,132630323200,220.79,174.88,197.83499999999998,204.67
+IDXX,Idexx Laboratories,Health Care,41198219264,583.39,372.5,477.945,497.04
+ILMN,"Illumina, Inc.",Health Care,20578373632,144.1537,86.575874,115.36478699999999,126.25
+INTC,Intel,Information Technology,84066156544,51.28,18.51,34.895,19.36
+INTU,Intuit,Information Technology,183678156800,676.62,473.56,575.09,646.37
+ISRG,Intuitive Surgical,Health Care,174073692160,496.18,254.85,375.515,494.01
+KDP,Keurig Dr Pepper,Consumer Staples,51002544128,37.69,27.66,32.675,37.05
+KLAC,KLA Corporation,Information Technology,101020385280,896.32,440.15,668.235,733.28
+KHC,Kraft Heinz,Consumer Staples,43031158784,38.96,30.68,34.82,35.2
+LRCX,Lam Research,Information Technology,99968147456,1130.0,574.42,852.21,747.78
+LIN,Linde plc,Materials,223858180096,479.79,361.02,420.405,467.34
+LULU,Lululemon Athletica,Consumer Discretionary,32751992832,516.39,226.01,371.2,260.14
+MAR,Marriott International,Consumer Discretionary,65240141824,260.57,180.75,220.66,230.7
+MRVL,Marvell Technology,Information Technology,64514580480,85.76,46.07,65.915,74.3
+MELI,MercadoLibre,Consumer Discretionary,107598643200,2143.96,1141.04,1642.5,2140.1
+META,Meta Platforms,Communication Services,1327194046464,544.23,279.4,411.815,525.6
+MCHP,Microchip Technology,Information Technology,41643520000,100.57,68.75,84.66,76.08
+MU,Micron Technology,Information Technology,101148377088,157.54,63.83,110.685,87.21
+MSFT,Microsoft,Information Technology,3200592642048,468.35,309.45,388.9,427.0
+MRNA,Moderna,Health Care,26246557696,170.47,62.55,116.50999999999999,69.68
+MDLZ,Mondelez International,Consumer Staples,100532314112,77.2,60.75,68.975,74.38
+MDB,MongoDB Inc.,Information Technology,21428803584,509.62,212.74,361.18,295.18
+MNST,Monster Beverage,Consumer Staples,49786970112,61.23,43.32,52.275,49.91
+NFLX,Netflix,Communication Services,299153752064,711.33,344.73,528.03,686.8
+NVDA,Nvidia,Information Technology,2921523052544,140.76,39.23,89.99499999999999,119.14
+NXPI,NXP Semiconductors,Information Technology,58570756096,296.08,167.21,231.64499999999998,225.14
+ORLY,O'Reilly Automotive,Consumer Discretionary,65284255744,1169.11,860.1,1014.605,1119.93
+ODFL,Old Dominion Freight Line,Industrials,41275744256,227.8,165.49,196.645,191.26
+ON,Onsemi,Information Technology,30721693696,95.69,59.34,77.515,69.33
+PCAR,Paccar,Industrials,49863999488,125.5,80.94,103.22,95.07
+PANW,Palo Alto Networks,Information Technology,112950640640,380.84,224.64,302.74,345.16
+PAYX,Paychex,Industrials,48597549056,136.4,106.27,121.33500000000001,134.19
+PYPL,PayPal,Financials,71665328128,74.4,50.25,62.325,70.36
+PDD,PDD Holdings,Consumer Discretionary,131919265792,164.69,88.01,126.35,97.33
+PEP,PepsiCo,Consumer Staples,243616382976,183.41,155.83,169.62,177.25
+QCOM,Qualcomm,Information Technology,186851213312,230.63,104.33,167.48,164.98
+REGN,Regeneron Pharmaceuticals,Health Care,127139536896,1211.2,769.19,990.195,1164.46
+ROP,Roper Technologies,Information Technology,59156697088,579.1,474.46,526.78,551.31
+ROST,Ross Stores,Consumer Discretionary,51506049024,163.6,108.35,135.975,152.68
+SBUX,Starbucks,Consumer Discretionary,111699525632,107.66,71.55,89.60499999999999,99.28
+SMCI,Supermicro,Information Technology,26769690624,1229.0,226.59,727.795,442.13
+SNPS,Synopsys,Information Technology,75281612800,629.38,440.62,535.0,488.95
+TTWO,Take-Two Interactive,Communication Services,26674567168,171.59,130.34,150.965,153.61
+TMUS,T-Mobile US,Communication Services,236657999872,205.28,135.82,170.55,202.41
+TSLA,"Tesla, Inc.",Consumer Discretionary,735693570048,273.93,138.8,206.365,229.81
+TXN,Texas Instruments,Information Technology,182545285120,214.66,139.48,177.07,195.98
+TTD,Trade Desk (The),Communication Services,52136759296,107.645,60.23,83.9375,104.5
+VRSK,Verisk Analytics,Industrials,38282149888,287.13,215.32,251.225,268.98
+VRTX,Vertex Pharmaceuticals,Health Care,125274963968,510.64,341.85,426.245,478.65
+WBD,Warner Bros. Discovery,Communication Services,20816713728,12.7,6.64,9.67,7.66
+WDAY,"Workday, Inc.",Information Technology,66263248896,311.28,199.81,255.545,251.19
+XEL,Xcel Energy,Utilities,35590864896,64.43,46.79,55.61,63.3425
+ZS,Zscaler,Information Technology,25932449792,259.61,146.59,203.10000000000002,166.71

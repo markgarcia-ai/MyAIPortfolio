@@ -1,0 +1,61 @@
+{
+    "date": "2024-25-05",
+    "portfolio_value": 21737,
+    "portfolio_invested": 22335,
+    "investments": {
+      "funds": [
+        {
+          "name": "TMNLS U.S. Eq Ldrs I/A GBP",
+          "quantity": 298.944,
+          "total_value": 1785
+        },
+        {
+          "name": "Fund B",
+          "quantity": 50,
+          "total_value": 12500
+        }
+      ],
+      "Investment trust": [
+        {
+          "name": "Hg Capital Trust PLC ORD 2.5P",
+          "quantity": 1558,
+          "total_value": 7657
+        },
+        {
+          "name": "3I Group PLC ORD 73 19/22P",
+          "quantity": 220,
+          "total_value": 6490
+        }        
+      ],
+      "stocks": [
+        {
+          "name": "ASM Holding",
+          "quantity": 1,
+          "total_value": 749
+        },
+        {
+          "name": "Microsoft Corp Common Shares",
+          "quantity": 2,
+          "total_value": 675
+        },
+        {
+          "name": "BigBearai Holdings Ordinary",
+          "quantity": 276,
+          "total_value": 339
+        },
+        {
+          "name": "NovoCure Limited",
+          "quantity": 20,
+          "total_value": 365
+        }
+      ],
+      "cash": [
+        {
+          "name": "ISA Cash",
+          "quantity": 150,
+          "total_value": 30000
+        }
+      ]
+    }
+  }
+  
