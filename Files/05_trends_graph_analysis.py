@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import csv
 
 # Download stock data for the past month
 def get_stock_data(ticker):
@@ -50,7 +51,27 @@ def calculate_fibonacci_retracement(data):
     }
     return levels
 
-# Plotting the stock data with indicators
+# Determine trend based on indicators (confirmed_trend, breakouts, reversals)
+def determine_trend(macd, signal_line, rsi, upper_band, lower_band, close_price):
+    if (macd[-1] > signal_line[-1]) and (rsi[-1] < 70 and rsi[-1] > 30):  # MACD crossover and neutral RSI
+        return 'confirmed_trend'
+    elif close_price[-1] > upper_band[-1]:  # Price breaking above upper Bollinger Band
+        return 'breakout'
+    elif close_price[-1] < lower_band[-1]:  # Price falling below lower Bollinger Band
+        return 'reversal'
+    else:
+        return 'neutral'
+
+# Save the trend results in a CSV file
+def save_to_csv(tickers, trends, filename="stocks_matrix.csv"):
+    with open(filename, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Ticker", "Trend"])
+        for ticker, trend in zip(tickers, trends):
+            writer.writerow([ticker, trend])
+    print(f"Results saved to {filename}")
+
+# Plotting the stock data with indicators and save the plot
 def plot_stock_data(data, ticker, save_path):
     fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(14, 10), gridspec_kw={'height_ratios': [3, 1, 1]})
 
@@ -89,14 +110,38 @@ def plot_stock_data(data, ticker, save_path):
     # Save plot as PNG
     plt.savefig(save_path)
     plt.close()
+    print(f"Plot saved as {save_path}")
 
-# Main function to run the script
+# Main function to analyze and store results
 if __name__ == "__main__":
-    tickers = input("Enter three stock tickers separated by commas: ").upper().split(',')
-    
+    # Get tickers from user input
+    tickers = input("Enter three stock tickers separated by spaces: ").upper().split()
+
+    # List to store trends for each ticker
+    trend_results = []
+
+    # Analyze each ticker
     for ticker in tickers:
-        ticker = ticker.strip()
+        print(f"Analyzing {ticker}...")
+
+        # Get stock data
         stock_data = get_stock_data(ticker)
+        
+        # Calculate indicators
+        macd, signal_line = calculate_macd(stock_data)
+        rsi = calculate_rsi(stock_data)
+        upper_band, middle_band, lower_band = calculate_bollinger_bands(stock_data)
+        close_price = stock_data['Close']
+
+        # Determine the trend based on the indicators
+        trend = determine_trend(macd, signal_line, rsi, upper_band, lower_band, close_price)
+        trend_results.append(trend)
+
+        # Save the plot for the ticker
         save_path = f"{ticker}_stock_plot.png"
         plot_stock_data(stock_data, ticker, save_path)
-        print(f"Plot saved as {save_path}")
+
+        print(f"{ticker}: {trend}")
+
+    # Save results to CSV
+    save_to_csv(tickers, trend_results)

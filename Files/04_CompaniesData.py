@@ -1,10 +1,6 @@
 import pandas as pd
 import yfinance as yf
 
-# Load the CSV file
-file_path = 'output.csv'  # Specify your CSV file path
-df = pd.read_csv(file_path)
-
 # Function to fetch company data using Yahoo Finance
 def fetch_company_data(symbol):
     try:
@@ -24,21 +20,32 @@ def fetch_company_data(symbol):
         print(f"Error fetching data for {symbol}: {e}")
         return 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'
 
-# Iterate over each row to update company details
-for index, row in df.iterrows():
-    symbol = row['Symbol']  # Assuming 'Symbol' is column A
+# Main function to process CSV files
+def process_csv(file_path):
+    # Load the CSV file
+    df = pd.read_csv(file_path)
     
-    # Fetch company data
-    company_name, sector, market_cap, financial_results, next_financial_statement = fetch_company_data(symbol)
-    
-    # Update the DataFrame with the fetched data
-    df.at[index, 'Company Name'] = company_name
-    df.at[index, 'Sector'] = sector
-    df.at[index, 'Market Capital'] = market_cap
-    df.at[index, 'Financial Results'] = financial_results
-    df.at[index, 'Next Financial Statement'] = next_financial_statement
+    # Iterate over each row to update company details
+    for index, row in df.iterrows():
+        symbol = row['Symbol']  # Assuming 'Symbol' is column A
+        
+        # Fetch company data
+        company_name, sector, market_cap, financial_results, next_financial_statement = fetch_company_data(symbol)
+        
+        # Update the DataFrame with the fetched data
+        df.at[index, 'Company Name'] = company_name
+        df.at[index, 'Sector'] = sector
+        df.at[index, 'Market Capital'] = market_cap
+        df.at[index, 'Financial Results'] = financial_results
+        df.at[index, 'Next Financial Statement'] = next_financial_statement
 
-# Save the updated CSV
-df.to_csv(file_path, index=False)
+    # Save the updated CSV
+    df.to_csv(file_path, index=False)
+    print(f"CSV file {file_path} updated successfully!")
 
-print("CSV file updated successfully!")
+if __name__ == "__main__":
+    # Process the first CSV file
+    process_csv('SP500_output.csv')
+
+    # Process the second CSV file
+    process_csv('NASDAQ_output.csv')
