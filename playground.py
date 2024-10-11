@@ -1,29 +1,17 @@
 import yfinance as yf
 
-# Example: Fetch data for Apple Inc.
-ticker = yf.Ticker("AAPL")
+# Define the ticker symbol of the company (e.g., 'AAPL' for Apple)
+ticker = 'AAPL'  # Replace 'AAPL' with any other ticker symbol as needed
 
-# Get company info
-info = ticker.info
-print("Company Name:", info['longName'])
-print("Sector:", info['sector'])
-print("Industry:", info['industry'])
+# Fetch data using yfinance
+stock = yf.Ticker(ticker)
 
-# Get valuation metrics
-print("P/E Ratio:", info.get('trailingPE'))
-print("P/B Ratio:", info.get('priceToBook'))
-print("PEG Ratio:", info.get('pegRatio'))
+# Retrieve the next earnings date
+earnings_dates = stock.earnings_dates
 
-# Get financial statements
-income_statement = ticker.financials
-balance_sheet = ticker.balance_sheet
-cash_flow = ticker.cashflow
-
-# Display financial statements
-print("Income Statement:\n", income_statement)
-print("Balance Sheet:\n", balance_sheet)
-print("Cash Flow Statement:\n", cash_flow)
-
-# Get historical market data
-hist = ticker.history(period="1y")
-print("Historical Market Data:\n", hist.head())
+if not earnings_dates.empty:
+    # Get the most recent upcoming earnings date
+    next_earnings_date = earnings_dates.index[0]
+    print(f"The next earnings release date for {ticker} is: {next_earnings_date.date()}")
+else:
+    print(f"No upcoming earnings date found for {ticker}.")

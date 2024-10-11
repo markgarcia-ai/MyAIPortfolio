@@ -7,25 +7,36 @@ def fetch_company_data(symbol):
         # Use yfinance to get ticker data
         ticker = yf.Ticker(symbol)
         
-        # Extract the needed data
-        company_name = ticker.info.get('longName', 'N/A')
-        sector = ticker.info.get('sector', 'N/A')
-        industry = ticker.info.get('industry', 'N/A')
-        market_cap = ticker.info.get('marketCap', 'N/A')
-        p_e_ratio = ticker.info.get('trailingPE', 'N/A')
-        p_b_ratio = ticker.info.get('priceToBook', 'N/A')
-        peg_ratio = ticker.info.get('pegRatio', 'N/A')
-        div_yield = ticker.info.get('dividendYield', 'N/A')
-        eps = ticker.info.get('trailingEps', 'N/A')
-        revenue = ticker.info.get('totalRevenue', 'N/A')
-        profit_margin = ticker.info.get('profitMargins', 'N/A')
-        ebitda = ticker.info.get('ebitda', 'N/A')
+        # Extract the needed data, with a default value of 'Not Available'
+        company_name = ticker.info.get('longName', 'Not Available')
+        sector = ticker.info.get('sector', 'Not Available')
+        industry = ticker.info.get('industry', 'Not Available')
+        market_cap = ticker.info.get('marketCap', 'Not Available')
+        p_e_ratio = ticker.info.get('trailingPE', 'Not Available')
+        p_b_ratio = ticker.info.get('priceToBook', 'Not Available')
+        peg_ratio = ticker.info.get('pegRatio', 'Not Available')
+        div_yield = ticker.info.get('dividendYield', 'Not Available')
+        eps = ticker.info.get('trailingEps', 'Not Available')
+        revenue = ticker.info.get('totalRevenue', 'Not Available')
+        profit_margin = ticker.info.get('profitMargins', 'Not Available')
+        ebitda = ticker.info.get('ebitda', 'Not Available')
+        earnings_date = ticker.info.get('nextEarningsDate', 'Not Available')
 
-        return company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, peg_ratio,div_yield,eps,revenue,profit_margin,ebitda
+        print(f"Data for {ticker} : {company_name} fetched successfully, " +
+            f"sector: {sector}, industry: {industry}, market cap: {market_cap}, " +
+            f"P/E ratio: {p_e_ratio}, P/B ratio: {p_b_ratio}, PEG ratio: {peg_ratio}, " +
+            f"Dividend Yield: {div_yield}, EPS: {eps}, Revenue: {revenue}, " +
+            f"Profit Margin: {profit_margin}, EBITDA: {ebitda}, Earnings Date: {earnings_date}")
+        
+        return (company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, 
+                peg_ratio, div_yield, eps, revenue, profit_margin, ebitda, earnings_date)
     
     except Exception as e:
         print(f"Error fetching data for {symbol}: {e}")
-        return 'N/A','N/A', 'N/A', 'N/A', 'N/A', 'N/A','N/A','N/A', 'N/A', 'N/A', 'N/A', 'N/A'
+        return ('Not Available', 'Not Available', 'Not Available', 'Not Available', 
+                'Not Available', 'Not Available', 'Not Available', 'Not Available', 
+                'Not Available', 'Not Available', 'Not Available', 'Not Available', 
+                'Not Available')
 
 # Main function to process CSV files
 def process_csv(file_path):
@@ -37,8 +48,8 @@ def process_csv(file_path):
         symbol = row['Symbol']  # Assuming 'Symbol' is column A
         
         # Fetch company data
-        company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, peg_ratio,div_yield,eps,revenue,profit_margin,ebitda = fetch_company_data(symbol)
-        
+        company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, peg_ratio, div_yield, eps, revenue, profit_margin, ebitda, earnings_date = fetch_company_data(symbol)
+
         # Update the DataFrame with the fetched data
         df.at[index, 'Company Name'] = company_name
         df.at[index, 'Sector'] = sector
@@ -51,7 +62,8 @@ def process_csv(file_path):
         df.at[index, 'EPS'] = eps
         df.at[index, 'Revenue'] = revenue
         df.at[index, 'Profit Margin'] = profit_margin
-        df.at[index, 'EBITDA'] = ebitda      
+        df.at[index, 'EBITDA'] = ebitda
+        df.at[index, 'Earnings Date'] = earnings_date  # Add earnings date
 
     # Save the updated CSV
     df.to_csv(file_path, index=False)
