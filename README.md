@@ -10,6 +10,8 @@ STATUS : TESTED AND OK 15 Sep 2024
 
 ----------------------------------------------------------------------------------------------------------------
 
+# 
+
 ## 2-Run Neural Network for short positions stimation. [02_Neural_Networks_AllStocks.py]
 Run Neural Network short positions for next month on the next markets: 
 NYSE, NASDAQ and AMEX. 
@@ -91,9 +93,9 @@ Formula: Cash from Operations - Capital Expenditures <br>
 **3. Cash Flow to Debt Ratio**: Measures a company’s ability to cover its debt using the cash flow from its operations.
 Formula: Operating Cash Flow / Total Debt <br>
 
-----------------------------------------------------------------------------------------------------------------
+============================================================================================================================
 
-## 5-Stocks selections [Two python scripts]
+## 5-Stocks selections [Three python scripts]
 Open the output csv data and sort companies with negative short position returns and select three of them. 
 
 ### 5.1-Trading with momentum [5_1_TradingWithMomentum.py]
@@ -112,19 +114,14 @@ Breakout trading is centered around specific price levels, such as support and r
 **Outliers**: Kolmogorov-Smirnov Test and Find Outliers.
 
 
-----------------------------------------------------------------------------------------------------------------
-
-
-## 6-Trends graph analysis [06_trends_graph_analysis.py]
-It plots MACD, RSI, Bollinger Bands and Fibonacci Retracement levels for three stocks. 
-Run 05_trengs_graph_analysis.py -> Output data: XXXX_stock_plot.png
+### 5.3-Volume analysis [5_3_volumne_analysis.py]
+Volumne is crucial for validating breakouts. A strong breakout accompanied by high volumne suggests that the price momevement is supported by significant trader interest, making it more likely to continue. Often is look to low colume during a breakout as a warning sign that the move may not hold, helping to filter out false signals.
+Volume helps assess the strength of a prevailing trend. High volume during price increases indicates strong momentum, while low volume may signal a weakening trend.
 STATUS : TESTED AND OK 15 Sep 2024
 
-----------------------------------------------------------------------------------------------------------------
-
-## 7-Volume analysis []
-Volume is a crucial metric in stock market analysis for several reasons: Liquidity indicator, Market Sentiment, Confirmation of Trends, Preice PAtterns and Technical Analysis, Support and resistance levels, Volatility measurement and avoiding false signals.
-Run 06_volume_analysis.py
+## 5.4-Trends graph analysis [5_4_trends_graph_analysis.py]
+It plots MACD, RSI, Bollinger Bands and Fibonacci Retracement levels for three stocks. 
+Run 05_trengs_graph_analysis.py -> Output data: XXXX_stock_plot.png
 STATUS : TESTED AND OK 15 Sep 2024
 
 ----------------------------------------------------------------------------------------------------------------
