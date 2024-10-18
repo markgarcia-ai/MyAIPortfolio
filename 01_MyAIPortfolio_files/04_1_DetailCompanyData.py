@@ -142,4 +142,4 @@ def get_company_summary(ticker_symbol):
 
 
 # Example usage
-get_company_summary("ASML")  # Replace "MSFT" with the desired company's ticker symbol
+get_company_summary("WBA")  # Replace "MSFT" with the desired company's ticker symbol
