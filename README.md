@@ -93,9 +93,17 @@ Formula: Cash from Operations - Capital Expenditures <br>
 **3. Cash Flow to Debt Ratio**: Measures a company’s ability to cover its debt using the cash flow from its operations.
 Formula: Operating Cash Flow / Total Debt <br>
 
+
+### 4.2-Sentiment analysis [4_2_sentiment_analysis.py]
+TBC
+
+STATUS : TESTED AND OK 15 Sep 2024
+
+
 ============================================================================================================================
 
 ## 5-Stocks selections [Three python scripts]
+Select stock based on trading with momentum and another strategies learned in the AI traiding course.
 Open the output csv data and sort companies with negative short position returns and select three of them. 
 
 ### 5.1-Trading with momentum [5_1_TradingWithMomentum.py]
@@ -122,13 +130,6 @@ STATUS : TESTED AND OK 15 Sep 2024
 ## 5.4-Trends graph analysis [5_4_trends_graph_analysis.py]
 It plots MACD, RSI, Bollinger Bands and Fibonacci Retracement levels for three stocks. 
 Run 05_trengs_graph_analysis.py -> Output data: XXXX_stock_plot.png
-STATUS : TESTED AND OK 15 Sep 2024
-
-----------------------------------------------------------------------------------------------------------------
-
-## 8-Sentiment analysis []
-TBC
-Run 07_sentiment_analysis.py
 STATUS : TESTED AND OK 15 Sep 2024
 
 ----------------------------------------------------------------------------------------------------------------
