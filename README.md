@@ -3,6 +3,14 @@
 In 01_Files folder we have the different scripts to run the stocks analysis. It doesn't do any portolio checks yet. 
 Tasks to check S&P500 and NASDAQ stocks and find short positions <br>
 
+
+<div align="center">
+  <h3>Flowchart process</h3>
+  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/00_Assets/01_Images/portfolio_flow_chart.png" width="100%" />
+</div>
+
+
+
 ## 1-Get latest stock, ETF and Investment Trusts market data [01_download_data.py]
 Get latest data for NYSE, NASDAQ and AMEX. 
 Run 01_download_data.py -> Output data: XXXXX_stocks.csv
