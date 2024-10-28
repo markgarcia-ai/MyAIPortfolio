@@ -9,26 +9,30 @@ This is my AI-driven portfolio management system which follows a combine advance
 
 ====================================================================================
 
-## 1-Get latest stock, ETF and Investment Trusts market data [01_download_data.py]
+## [1] Get latest stock, ETF and Investment Trusts market data
 Get latest data for NYSE, NASDAQ and S&P500. Gathering a diverse range of financial data, including stocks, ETFs, and investment trusts from Yahoo Finance, forms a reliable basis for portfolio construction. This broad data sourcing aids in achieving a balanced risk-return profile, as each asset type behaves differently under various market conditions, providing an inherent layer of diversification.
+
+Scripts : [01_download_data.py]
 
 ====================================================================================
 
-## 2-Run Neural Network for short positions stimation [02_Neural_Networks_AllStocks.py]
+## [2] Run Neural Network for short positions stimation
 Deploying a neural network model to detect short positions is impactful, especially when the model is well-calibrated and fed with meaningful features. Experimenting with multiple architectures or using ensemble methods can refine predictions, enhancing the model's ability to identify high-confidence short positions.
 
+Scripts : [02_Neural_Networks_AllStocks.py]
 Outout data: predicted_short_position.txt
 
 ====================================================================================
 
-## 3-Convert data to excel columns [03_ConvertToCSV.py]
+## [3] Convert data to excel columns 
 Data from NN is in text, a script is required to convert data to excel for better analysis. Documenting model predictions in an organized Excel file makes it easy to review and analyze. This record not only improves accessibility for detailed analysis but also offers a chronological view of model performance, helping to track prediction accuracy and refine strategies based on observed trends.
 
+Scripts : [03_ConvertToCSV.py]
 Output data: XXXX_output.csv
 
-============================================================================================================================
+====================================================================================
 
-## 4-Update data to show more company informations. [04_CompaniesData.py] 
+## [4] Update data to show more company informations. [04_CompaniesData.py] 
 Add latest data for the company for each stock for better understanding to select where to invest. Applying technical indicators like momentum, breakout patterns, volume, and trend analyses to identify potential trades creates a data-driven, active trading framework
 
 
@@ -96,7 +100,7 @@ Formula: Operating Cash Flow / Total Debt <br>
 ### 4.2-Sentiment analysis [4_2_sentiment_analysis.py]
 Running sentiment analysis on top predicted short positions adds valuable qualitative insight, enabling you to capture shifts in public opinion that numbers alone may overlook. This step sharpens decision-making, helping to anticipate market movements based on public and media sentiment.
 
-============================================================================================================================
+====================================================================================
 
 ## 5-Stocks selections 
 Select stock based on trading with momentum and another strategies learned in the AI traiding course.
@@ -105,15 +109,16 @@ Open the output csv data and sort companies with negative short position returns
 ### 5.1-Trading with momentum [5_1_TradingWithMomentum.py]
 Momentum trading is based on the idea that assets that have been trending in a particular direction (up or down) will continue to do so for some time. It can be applied over longer timeframes, allowing traders to hold positions for days, weeks, or even momnths, depending on the trend. 
 
+<div align="center">
+  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Momentum chart.drawio.png" width="100%" />
+</div>
+
 Resample adjusted prices, compute log returns, shift returns, generate tradigin Signal, Projected Returns, T-Test and p-value.
 
 Compute log returns ($R_t$) from prices ($P_t$) as your primary momentum indicator:
 
-$$R_t = log_e(P_t) - log_e(P_{t-1})$$
+$$R_t = log_e(P_t) - log_e(P_{t-1})$$ <br>
 
-<div align="center">
-  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Momentum chart.drawio.png" width="100%" />
-</div>
 
 
 ### 5.2-Breakout Strategy [5_2_BreakoutStrategy.py]
@@ -142,13 +147,13 @@ The matrix selects the best stock out of three based on trends, sentiment result
 Run 08_matrix_results.py
 NOT WORKING 
 
-============================================================================================================================
+====================================================================================
 
 ## 6 - Aplha research and factor modeling [6_Alpha_research_and _factor_modeling.py] -> From AI trading course
 . <br>
 
 
-============================================================================================================================
+====================================================================================
 
 ## 7 - Smart Beta and Portfolio Optimization [7_Smart_Beta_and_Portfolio.py] -> From AI trading course
 Smart beta and optimization are essential to fine-tuning portfolio performance, targeting an improved risk-return balance. This process aligns the portfolio’s holdings with specific objectives, such as minimizing volatility or maximizing returns, while simultaneously addressing risks. <br>
@@ -157,7 +162,7 @@ Comparaison of the smart beta portfolio to benchmark index and calculate trackin
 Smart Beta Computes: Index Weights, ETF Weights, Returns, Weighted Returns, Cumulatie Returns and tracking error. <br>
 Portfolio Optimization: Compute Covariance, optimal weights using quadratic programming, rebalance portfolio and calculate portfolio turnover <br>
 
-============================================================================================================================
+====================================================================================
 
 ## 8 - Backtesting [08_backtesting.py]
 The backtester will perform portfolio optimization that includes transaction costs, and you'll implement it with computational efficiency in mind, to allow for a reasonably fast backtest. Also use performance attribution to identify the major drivers of your portfolio's profit-and-loss (PnL).
@@ -165,7 +170,7 @@ The backtester will perform portfolio optimization that includes transaction cos
 
 
 
-============================================================================================================================
+====================================================================================
 
 *Invest wisely, and always conduct thorough research or consult with a financial advisor before implementing any investment strategy.*
 
