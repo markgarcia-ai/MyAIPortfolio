@@ -7,19 +7,19 @@ This is my AI-driven portfolio management system which follows a combine advance
   <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/portfolio_flow_chart.png" width="100%" />
 </div>
 
-============================================================================================================================
+====================================================================================
 
 ## 1-Get latest stock, ETF and Investment Trusts market data [01_download_data.py]
 Get latest data for NYSE, NASDAQ and S&P500. Gathering a diverse range of financial data, including stocks, ETFs, and investment trusts from Yahoo Finance, forms a reliable basis for portfolio construction. This broad data sourcing aids in achieving a balanced risk-return profile, as each asset type behaves differently under various market conditions, providing an inherent layer of diversification.
 
-============================================================================================================================
- 
-## 2-Run Neural Network for short positions stimation. [02_Neural_Networks_AllStocks.py]
+====================================================================================
+
+## 2-Run Neural Network for short positions stimation [02_Neural_Networks_AllStocks.py]
 Deploying a neural network model to detect short positions is impactful, especially when the model is well-calibrated and fed with meaningful features. Experimenting with multiple architectures or using ensemble methods can refine predictions, enhancing the model's ability to identify high-confidence short positions.
 
 Outout data: predicted_short_position.txt
 
-============================================================================================================================
+====================================================================================
 
 ## 3-Convert data to excel columns [03_ConvertToCSV.py]
 Data from NN is in text, a script is required to convert data to excel for better analysis. Documenting model predictions in an organized Excel file makes it easy to review and analyze. This record not only improves accessibility for detailed analysis but also offers a chronological view of model performance, helping to track prediction accuracy and refine strategies based on observed trends.
@@ -98,7 +98,7 @@ Running sentiment analysis on top predicted short positions adds valuable qualit
 
 ============================================================================================================================
 
-## 5-Stocks selections [Three python scripts]
+## 5-Stocks selections 
 Select stock based on trading with momentum and another strategies learned in the AI traiding course.
 Open the output csv data and sort companies with negative short position returns and select three of them. 
 
@@ -111,6 +111,9 @@ Compute log returns ($R_t$) from prices ($P_t$) as your primary momentum indicat
 
 $$R_t = log_e(P_t) - log_e(P_{t-1})$$
 
+<div align="center">
+  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Momentum chart.drawio.png" width="100%" />
+</div>
 
 
 ### 5.2-Breakout Strategy [5_2_BreakoutStrategy.py]
