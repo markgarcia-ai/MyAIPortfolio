@@ -19,8 +19,8 @@ Scripts : [01_download_data.py]
 ## [2] Run Neural Network for short positions stimation
 Deploying a neural network model to detect short positions is impactful, especially when the model is well-calibrated and fed with meaningful features. Experimenting with multiple architectures or using ensemble methods can refine predictions, enhancing the model's ability to identify high-confidence short positions.
 
-Scripts : [02_Neural_Networks_AllStocks.py]
-Outout data: predicted_short_position.txt
+Scripts : [02_Neural_Networks_AllStocks.py] <br>
+Output data: predicted_short_position.txt
 
 ====================================================================================
 

@@ -4,8 +4,20 @@ import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import numpy as np
+"""
+Steps:
+1-Load Market Data: 
+    def download_sp500_data(start_date, end_date, filename='sp500_data.csv')
+2-Reasample adjusted prices: 
+3-Compute Log Returns and shift returns:
+    def compute_and_plot_log_returns(csv_file, ticker):
+4-Generate Trading Signal:
+    def shift_returns(returns, shift_n):
+5-Projectes Returns:
+6-Annualized rate of return:
+7-T valua and P value:
 
-#Load Market Data
+"""
 def download_sp500_data(start_date, end_date, filename='sp500_data.csv'):
     # Load S&P 500 tickers from Wikipedia
     sp500_df = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')[0]
@@ -141,15 +153,96 @@ def compute_and_plot_log_returns(csv_file, ticker):
     
     return monthly_data.reset_index()
 
+def shift_returns(returns, shift_n):
+    """
+    Shifts the log returns by the specified number of periods.
+
+    Parameters:
+    returns (pd.DataFrame): DataFrame of log returns for multiple assets.
+    shift_n (int): Number of periods to shift. Positive values shift forward,
+                   and negative values shift backward.
+
+    Returns:
+    pd.DataFrame: DataFrame with shifted log returns.
+    """
+    # Shift the returns DataFrame by shift_n periods
+    shifted_returns = returns.shift(periods=shift_n)
+    return shifted_returns
+
+def compute_and_plot_shifted_returns(csv_file, ticker, shift_n):
+    """
+    Computes log returns for a specific ticker's monthly close prices from a CSV file,
+    shifts the log returns forward, and plots both.
+
+    Parameters:
+    csv_file (str): Path to the CSV file containing price data.
+    ticker (str): The ticker symbol to calculate log returns for.
+    shift_n (int): Number of periods to shift the log returns forward.
+
+    Returns:
+    pd.DataFrame: DataFrame with original and shifted log returns for the selected ticker.
+    """
+    # Load data from CSV
+    data = pd.read_csv(csv_file)
+    
+    # Convert 'date' column to datetime format
+    data['date'] = pd.to_datetime(data['date'])
+    
+    # Filter data for the selected ticker
+    ticker_data = data[data['ticker'] == ticker]
+    
+    # Check if ticker exists in the data
+    if ticker_data.empty:
+        print(f"No data found for ticker '{ticker}' in {csv_file}")
+        return None
+    
+    # Set the 'date' column as the index for resampling
+    ticker_data.set_index('date', inplace=True)
+    
+    # Resample to monthly data, selecting the last observation of each month for close prices
+    monthly_data = ticker_data['adj_close'].resample('M').last()
+    
+    # Compute log returns: R_t = log(P_t) - log(P_{t-1})
+    monthly_data = pd.DataFrame({'monthly_close': monthly_data})
+    monthly_data['log_returns'] = np.log(monthly_data['monthly_close']) - np.log(monthly_data['monthly_close'].shift(1))
+    
+    # Shift the log returns forward by shift_n periods
+    monthly_data['shifted_log_returns'] = monthly_data['log_returns'].shift(shift_n)
+    
+    # Plot both original log returns and shifted log returns
+    plt.figure(figsize=(12, 6))
+    
+    # Plot original log returns
+    plt.plot(monthly_data.index, monthly_data['log_returns'], label='Original Log Returns', color='blue')
+    
+    # Plot shifted log returns
+    plt.plot(monthly_data.index, monthly_data['shifted_log_returns'], label=f'Shifted Log Returns (shift_n={shift_n})', color='red', linestyle='--')
+    
+    # Set the title and labels
+    plt.title(f'Original and Shifted Log Returns for {ticker}')
+    plt.xlabel('Date')
+    plt.ylabel('Log Returns')
+    plt.legend()
+    
+    # Show the plot
+    plt.tight_layout()
+    plt.show()
+    
+    return monthly_data.reset_index()
+
 
 if __name__ == "__main__":
     start_date = (datetime.datetime.now() - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
     end_date = datetime.datetime.now().strftime('%Y-%m-%d')
     #download_sp500_data(start_date, end_date)
     #plot_ticker_from_csv('sp500_data.csv', 'AAPL')  # Replace 'AAPL' with the ticker you want to plot
-    result = compute_and_plot_log_returns('sp500_data.csv', 'AAPL')  # Replace 'AAPL' with your selected ticker
+    #result = compute_and_plot_log_returns('sp500_data.csv', 'AAPL')  # Replace 'AAPL' with your selected ticker
+    #print(result['log_returns'])
+    #shifted_returns_forward = shift_returns(result['log_returns'], shift_n=2)
+    #print("Shifted Returns (shift_n=2):")
+    #print(shifted_returns_forward)
+    result = compute_and_plot_shifted_returns('sp500_data.csv', 'AAPL', shift_n=2)  # Replace 'AAPL' and shift_n as needed
     print(result)
-
 
 
 
