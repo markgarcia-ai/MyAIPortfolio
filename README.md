@@ -1,44 +1,35 @@
 # MyAIPortfolio description
 
-In 01_Files folder we have the different scripts to run the stocks analysis. It doesn't do any portolio checks yet. 
-Tasks to check S&P500 and NASDAQ stocks and find short positions <br>
-
+This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
 
 <div align="center">
   <h3>Flowchart process</h3>
-  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/00_Assets/01_Images/portfolio_flow_chart.png" width="100%" />
+  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/portfolio_flow_chart.png" width="100%" />
 </div>
 
-
+============================================================================================================================
 
 ## 1-Get latest stock, ETF and Investment Trusts market data [01_download_data.py]
-Get latest data for NYSE, NASDAQ and AMEX. 
-Run 01_download_data.py -> Output data: XXXXX_stocks.csv
-STATUS : TESTED AND OK 15 Sep 2024
+Get latest data for NYSE, NASDAQ and S&P500. Gathering a diverse range of financial data, including stocks, ETFs, and investment trusts from Yahoo Finance, forms a reliable basis for portfolio construction. This broad data sourcing aids in achieving a balanced risk-return profile, as each asset type behaves differently under various market conditions, providing an inherent layer of diversification.
 
-----------------------------------------------------------------------------------------------------------------
-
-# 
-
+============================================================================================================================
+ 
 ## 2-Run Neural Network for short positions stimation. [02_Neural_Networks_AllStocks.py]
-Run Neural Network short positions for next month on the next markets: 
-NYSE, NASDAQ and AMEX. 
-Run 02_Neural_Networks_AllStocks.py -> Outout data: predicted_short_position.txt
-STATUS : TESTED AND OK 15 Sep 2024
+Deploying a neural network model to detect short positions is impactful, especially when the model is well-calibrated and fed with meaningful features. Experimenting with multiple architectures or using ensemble methods can refine predictions, enhancing the model's ability to identify high-confidence short positions.
 
-----------------------------------------------------------------------------------------------------------------
+Outout data: predicted_short_position.txt
+
+============================================================================================================================
 
 ## 3-Convert data to excel columns [03_ConvertToCSV.py]
-Data from NN is in text, a script is required to convert data to excel for better analysis.
-Run 03_ConvertToCSV.py -> Output data: XXXX_output.csv
-STATUS : TESTED AND OK 15 Sep 2024
+Data from NN is in text, a script is required to convert data to excel for better analysis. Documenting model predictions in an organized Excel file makes it easy to review and analyze. This record not only improves accessibility for detailed analysis but also offers a chronological view of model performance, helping to track prediction accuracy and refine strategies based on observed trends.
 
-----------------------------------------------------------------------------------------------------------------
+Output data: XXXX_output.csv
+
+============================================================================================================================
 
 ## 4-Update data to show more company informations. [04_CompaniesData.py] 
-Add latest data for the company for each stock for better understanding to select where to invest. 
-Run 04_CompaniesData.py -> Output data: XXXX_output.csv
-STATUS : TESTED AND OK 15 Sep 2024
+Add latest data for the company for each stock for better understanding to select where to invest. Applying technical indicators like momentum, breakout patterns, volume, and trend analyses to identify potential trades creates a data-driven, active trading framework
 
 
 ### 4.1 - Company details [04_1_DetailCompanyData.py]
@@ -103,10 +94,7 @@ Formula: Operating Cash Flow / Total Debt <br>
 
 
 ### 4.2-Sentiment analysis [4_2_sentiment_analysis.py]
-TBC
-
-STATUS : TESTED AND OK 15 Sep 2024
-
+Running sentiment analysis on top predicted short positions adds valuable qualitative insight, enabling you to capture shifts in public opinion that numbers alone may overlook. This step sharpens decision-making, helping to anticipate market movements based on public and media sentiment.
 
 ============================================================================================================================
 
@@ -118,6 +106,12 @@ Open the output csv data and sort companies with negative short position returns
 Momentum trading is based on the idea that assets that have been trending in a particular direction (up or down) will continue to do so for some time. It can be applied over longer timeframes, allowing traders to hold positions for days, weeks, or even momnths, depending on the trend. 
 
 Resample adjusted prices, compute log returns, shift returns, generate tradigin Signal, Projected Returns, T-Test and p-value.
+
+Compute log returns ($R_t$) from prices ($P_t$) as your primary momentum indicator:
+
+$$R_t = log_e(P_t) - log_e(P_{t-1})$$
+
+
 
 ### 5.2-Breakout Strategy [5_2_BreakoutStrategy.py]
 Breakout trading is centered around specific price levels, such as support and resistance. Traders look for a price to breach these levels to enter a position. While breakouts can be used for various timeframes, they are often associated with sort-term trading, aiming to capture quick profits. 
@@ -140,29 +134,35 @@ It plots MACD, RSI, Bollinger Bands and Fibonacci Retracement levels for three s
 Run 05_trengs_graph_analysis.py -> Output data: XXXX_stock_plot.png
 STATUS : TESTED AND OK 15 Sep 2024
 
-----------------------------------------------------------------------------------------------------------------
-
-## 9-Matrix selection []
+## 5.5-Matrix results [5_5_matrix_results.py]
 The matrix selects the best stock out of three based on trends, sentiment results and volume analysis results.
 Run 08_matrix_results.py
 NOT WORKING 
 
-----------------------------------------------------------------------------------------------------------------
+============================================================================================================================
 
-## 10 - Smart Beta and Portfolio Optimization [] -> From AI trading course
+## 6 - Aplha research and factor modeling [6_Alpha_research_and _factor_modeling.py] -> From AI trading course
+. <br>
+
+
+============================================================================================================================
+
+## 7 - Smart Beta and Portfolio Optimization [7_Smart_Beta_and_Portfolio.py] -> From AI trading course
+Smart beta and optimization are essential to fine-tuning portfolio performance, targeting an improved risk-return balance. This process aligns the portfolio’s holdings with specific objectives, such as minimizing volatility or maximizing returns, while simultaneously addressing risks. <br>
 
 Comparaison of the smart beta portfolio to benchmark index and calculate tracking error against the index. <br>
 Smart Beta Computes: Index Weights, ETF Weights, Returns, Weighted Returns, Cumulatie Returns and tracking error. <br>
 Portfolio Optimization: Compute Covariance, optimal weights using quadratic programming, rebalance portfolio and calculate portfolio turnover <br>
 
-----------------------------------------------------------------------------------------------------------------
+============================================================================================================================
 
-## 11 - Portfolio performance comparison []
+## 8 - Backtesting [08_backtesting.py]
+The backtester will perform portfolio optimization that includes transaction costs, and you'll implement it with computational efficiency in mind, to allow for a reasonably fast backtest. Also use performance attribution to identify the major drivers of your portfolio's profit-and-loss (PnL).
 
 
 
 
-----------------------------------------------------------------------------------------------------------------
+============================================================================================================================
 
 *Invest wisely, and always conduct thorough research or consult with a financial advisor before implementing any investment strategy.*
 
