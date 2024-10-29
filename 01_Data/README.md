@@ -1,23 +1,9 @@
-# MyAIPortfolio description
-
-This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
-
-<div align="center">
-  <h3>Flowchart process</h3>
-  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Page-3.drawio.png" width="100%" />
-</div>
+# DATA
 
 ## [1] Get latest stock, ETF and Investment Trusts market data
 Get latest data for NYSE, NASDAQ and S&P500. Gathering a diverse range of financial data, including stocks, ETFs, and investment trusts from Yahoo Finance, forms a reliable basis for portfolio construction. This broad data sourcing aids in achieving a balanced risk-return profile, as each asset type behaves differently under various market conditions, providing an inherent layer of diversification.
 
 Scripts : [01_download_data.py]
-
-
-## [2] Run Neural Network for short positions stimation
-Deploying a neural network model to detect short positions is impactful, especially when the model is well-calibrated and fed with meaningful features. Experimenting with multiple architectures or using ensemble methods can refine predictions, enhancing the model's ability to identify high-confidence short positions.
-
-Scripts : [02_Neural_Networks_AllStocks.py] <br>
-Output data: predicted_short_position.txt
 
 
 ## [3] Convert data to excel columns 
@@ -99,100 +85,4 @@ Running sentiment analysis on top predicted short positions adds valuable qualit
 
 Scripts: [4_2_sentiment_analysis.py]
 Output data: 
-
-
-## 5-Stocks selections 
-Select stock based on trading with momentum and another strategies learned in the AI traiding course.
-Open the output csv data and sort companies with negative short position returns and select three of them. 
-
-Combine NN results with Trading with momentum. Example below:
-<div align="center">
-  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Momentum chart.drawio.png" width="100%" />
-</div>
-
-
-### 5.1-Trading with momentum 
-Momentum trading is based on the idea that assets that have been trending in a particular direction (up or down) will continue to do so for some time. It can be applied over longer timeframes, allowing traders to hold positions for days, weeks, or even momnths, depending on the trend. 
-
-<div align="center">
-  <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/trading_with_momentum.jpeg" width="100%" />
-</div>
-
-
-
-Resample adjusted prices, compute log returns, shift returns, generate tradigin Signal, Projected Returns, T-Test and p-value.
-
-Compute log returns ($R_t$) from prices ($P_t$) as your primary momentum indicator:
-
-$$R_t = log_e(P_t) - log_e(P_{t-1})$$ <br>
-
-
-Scripts: [5_1_TradingWithMomentum.py]
-Output data: 
-
-
-### 5.2-Breakout Strategy 
-Breakout trading is centered around specific price levels, such as support and resistance. Traders look for a price to breach these levels to enter a position. While breakouts can be used for various timeframes, they are often associated with sort-term trading, aiming to capture quick profits. 
-
-
-**Generate Signal:** Compute the highs and Lows in a Window, compute long and short signals, filter signals, Lookahead Close Prices, Lookahead Price returns and compute the signal return.
-
-**Evaluate Signal** : Histogram.
-
-**Outliers**: Kolmogorov-Smirnov Test and Find Outliers.
-
-Scripts: [5_2_BreakoutStrategy.py]
-Output data:
-
-### 5.3-Volume analysis 
-Volumne is crucial for validating breakouts. A strong breakout accompanied by high volumne suggests that the price momevement is supported by significant trader interest, making it more likely to continue. Often is look to low colume during a breakout as a warning sign that the move may not hold, helping to filter out false signals.
-Volume helps assess the strength of a prevailing trend. High volume during price increases indicates strong momentum, while low volume may signal a weakening trend.
-
-Scripts: [5_3_volumne_analysis.py]
-Output data: 
-
-## 5.4-Trends graph analysis 
-It plots MACD, RSI, Bollinger Bands and Fibonacci Retracement levels for three stocks. 
-Run 05_trengs_graph_analysis.py -> Output data: XXXX_stock_plot.png
-
-Scripts: [5_4_trends_graph_analysis.py]
-Output data: 
-
-## 5.5-Matrix results [5_5_matrix_results.py]
-The matrix selects the best stock out of three based on trends, sentiment results and volume analysis results.
-Run 08_matrix_results.py
-NOT WORKING 
-
-
-
-## 6 - Aplha research and factor modeling  
-. <br>
-
-Scripts: [6_Alpha_research_and _factor_modeling.py]
-Output data:
-
-
-## 7 - Smart Beta and Portfolio Optimization 
-Smart beta and optimization are essential to fine-tuning portfolio performance, targeting an improved risk-return balance. This process aligns the portfolio’s holdings with specific objectives, such as minimizing volatility or maximizing returns, while simultaneously addressing risks. <br>
-
-Scripts: [7_Smart_Beta_and_Portfolio.py] <br>
-Output data: 
-
-Comparaison of the smart beta portfolio to benchmark index and calculate tracking error against the index. <br>
-Smart Beta Computes: Index Weights, ETF Weights, Returns, Weighted Returns, Cumulatie Returns and tracking error. <br>
-Portfolio Optimization: Compute Covariance, optimal weights using quadratic programming, rebalance portfolio and calculate portfolio turnover <br>
-
-
-
-## 8 - Backtesting 
-The backtester will perform portfolio optimization that includes transaction costs, and you'll implement it with computational efficiency in mind, to allow for a reasonably fast backtest. Also use performance attribution to identify the major drivers of your portfolio's profit-and-loss (PnL).
-
-Scripts: [08_backtesting.py] <br>
-Output data: 
-
-*Invest wisely, and always conduct thorough research or consult with a financial advisor before implementing any investment strategy.*
-
-
-
-
 
