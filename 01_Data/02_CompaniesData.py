@@ -1,5 +1,6 @@
 import pandas as pd
 import yfinance as yf
+import os
 
 # Function to fetch company data using Yahoo Finance
 def fetch_company_data(symbol):
@@ -22,11 +23,11 @@ def fetch_company_data(symbol):
         ebitda = ticker.info.get('ebitda', 'Not Available')
         earnings_date = ticker.info.get('nextEarningsDate', 'Not Available')
 
-        print(f"Data for {ticker} : {company_name} fetched successfully, " +
-            f"sector: {sector}, industry: {industry}, market cap: {market_cap}, " +
-            f"P/E ratio: {p_e_ratio}, P/B ratio: {p_b_ratio}, PEG ratio: {peg_ratio}, " +
-            f"Dividend Yield: {div_yield}, EPS: {eps}, Revenue: {revenue}, " +
-            f"Profit Margin: {profit_margin}, EBITDA: {ebitda}, Earnings Date: {earnings_date}")
+        print(f"Data for {symbol} fetched successfully. Company: {company_name}, " +
+              f"Sector: {sector}, Industry: {industry}, Market Cap: {market_cap}, " +
+              f"P/E Ratio: {p_e_ratio}, P/B Ratio: {p_b_ratio}, PEG Ratio: {peg_ratio}, " +
+              f"Dividend Yield: {div_yield}, EPS: {eps}, Revenue: {revenue}, " +
+              f"Profit Margin: {profit_margin}, EBITDA: {ebitda}, Earnings Date: {earnings_date}")
         
         return (company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, 
                 peg_ratio, div_yield, eps, revenue, profit_margin, ebitda, earnings_date)
@@ -40,12 +41,28 @@ def fetch_company_data(symbol):
 
 # Main function to process CSV files
 def process_csv(file_path):
-    # Load the CSV file
-    df = pd.read_csv(file_path)
+    # Define the column names
+    columns = [
+        'Symbol', 'Company Name', 'Sector', 'Industry', 'Market Capital', 
+        'P/E Ratio', 'P/B Ratio', 'PEG Ratio', 'Dividend Yield', 'EPS', 
+        'Revenue', 'Profit Margin', 'EBITDA', 'Earnings Date'
+    ]
+    
+    # Check if file exists
+    if not os.path.exists(file_path):
+        print(f"File {file_path} does not exist. Creating new file...")
+        # Create a new DataFrame with the required structure
+        df = pd.DataFrame(columns=columns)
+        df.to_csv(file_path, index=False)
+        print(f"New file {file_path} created with the required structure.")
+    else:
+        # Load the existing file
+        df = pd.read_csv(file_path)
+        print(f"File {file_path} loaded successfully.")
     
     # Iterate over each row to update company details
     for index, row in df.iterrows():
-        symbol = row['Symbol']  # Assuming 'Symbol' is column A
+        symbol = row['Symbol']  # Assuming 'Symbol' is present in the file
         
         # Fetch company data
         company_name, sector, industry, market_cap, p_e_ratio, p_b_ratio, peg_ratio, div_yield, eps, revenue, profit_margin, ebitda, earnings_date = fetch_company_data(symbol)
@@ -70,8 +87,9 @@ def process_csv(file_path):
     print(f"CSV file {file_path} updated successfully!")
 
 if __name__ == "__main__":
-    # Process the first CSV file
-    process_csv('sp500_stocks.csv')
+    # Define file paths
+    file = 'Outout_stocks_combined.csv'
+    
+    # Process the S&P 500 stocks file
+    process_csv(file)
 
-    # Process the second CSV file
-    process_csv('nasdaq_stocks.csv')

@@ -104,7 +104,10 @@ def run_nns(selection,output_file):
                 print(f"Skipping {filename} because it contains no data.")
 
 if __name__ == '__main__':
-    directory = "SP500_data"   
+    # Define the target directory
+    directory = "../../01_Data/SP500_data"
+
     run_nns(directory,'predicted_short_positions_SP500.txt')
-    directory = "NASDAQ_data"   
+   
+    directory = "../../01_Data/NASDAQ_data"   
     run_nns(directory,'predicted_short_positions_NASDAQ.txt')    

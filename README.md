@@ -7,6 +7,17 @@ This is my AI-driven portfolio management system which follows a combine advance
   <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Page-3.drawio.png" width="100%" />
 </div>
 
+## [0] Curent scripts sequences: 
+
+**1.Download stock market info** 01_Data/01_download_data.py <br>
+**2.Run NN for short position stocks** 03_Portfolios_Generation/02_Neural_Networks/02_Neural_Networks_AllStocks.py <br>
+The output file is are in txt
+**3.Convert files to CSV** 03_Portfolios_Generation/02_Neural_Networks/02_01_ConvertToCSV.py <br>
+The output file is a single csv file combining all stocks
+**4.Create companies information document** Copy file csv file to 01_Data and run 01_Data/02_CompaniesData.py<br>
+
+
+
 ## [1] Trading with momentum -> Trading signals branch
 **1.Methodology:** Momentum trading involves identifying assets that have shown strong price movements and assuming they will continue in the same direction. It’s often quantified through indicators like moving averages, relative strength index (RSI), or MACD. <br>
 **2.Best For:** Short- to medium-term strategies where the goal is to capture trends.
