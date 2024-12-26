@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Data</h1>
+    <p><strong>Last Updated:</strong> {{ data['last_updated'] }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Current Price</th>                
+                <th>Buy At</th>
+                <th>Sell At</th>
+                <th>Quantity</th>
+                <th>API Status</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in data['stocks'] %}
+            <tr>
+                <td>{{ stock['Ticker'] }}</td>
+                <td>{{ stock['Current Price'] }}</td>                
+                <td>{{ stock['buy at'] }}</td>
+                <td>{{ stock['Sell at'] }}</td>
+                <td>{{ stock['Quantity'] }}</td>
+                <td>{{ stock['API Status'] }}</td>
+                <td>{{ stock['Balance'] }}</td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

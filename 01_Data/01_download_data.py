@@ -164,13 +164,44 @@ def fetch_nasdaq_data():
     print("Data saved to nasdaq_stocks.csv")
 
 
+def fetch_sp_smallcap_600_data():
+    print("Fetching S&P SmallCap 600 companies list from Wikipedia...")
+    url = 'https://en.wikipedia.org/wiki/List_of_S%26P_600_companies'
+    headers = {
+        'User-Agent': 'Mozilla/5.0'
+    }
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    table = soup.find('table')
+
+    data = []
+    rows = table.find_all('tr')[1:]  # Skip header row
+    for row in rows:
+        cols = row.find_all('td')
+        if len(cols) >= 4:
+            symbol = cols[0].text.strip()
+            company_name = cols[1].text.strip()
+
+            info = fetch_data_with_retry(symbol)
+            if info:
+                market_cap = info.get('marketCap', 'N/A')
+                data.append([symbol, company_name, market_cap])
+            else:
+                data.append([symbol, company_name, 'N/A'])
+
+    df = pd.DataFrame(data, columns=['Symbol', 'Company Name', 'Market Cap'])
+    df.to_csv('sp600_stocks.csv', index=False)
+
+
 if __name__ == "__main__":
+    """
     print("===========STEP 1 : DOWNLOAD STOCKS INFORMATION====================")
     fetch_sp500_data()
     fetch_nasdaq_data()
+    
 
     start_date = '2023-11-23'  # YEAR-MONTH-DAY  
-    end_date = '2024-12-02'    # YEAR-MONTH-DAY  
+    end_date = '2024-12-10'    # YEAR-MONTH-DAY  
 
     print("===========STEP 2 : DOWNLOAD SP500 STOCKS DATA====================")
     sp500_csv_file = 'sp500_stocks.csv'
@@ -183,3 +214,14 @@ if __name__ == "__main__":
     nasdaq_symbols = pd.read_csv(nasdaq_csv_file)['Symbol'].tolist()
     for symbol in nasdaq_symbols:
         check_and_download_stock_data(symbol, start_date, end_date, 'NASDAQ_data')
+
+    """
+    start_date = '2023-11-23'  # YEAR-MONTH-DAY  
+    end_date = '2024-12-10'    # YEAR-MONTH-DAY 
+
+    fetch_sp_smallcap_600_data()
+    print("===========STEP 4 : DOWNLOAD NASDAQ STOCKS DATA====================")
+    sp600_csv_file = 'sp600_stocks.csv'
+    sp600_symbols = pd.read_csv(sp600_csv_file)['Symbol'].tolist()
+    for symbol in sp600_symbols:
+        check_and_download_stock_data(symbol, start_date, end_date, 'SP600_data')

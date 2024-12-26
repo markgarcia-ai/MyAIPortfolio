@@ -105,9 +105,13 @@ def run_nns(selection,output_file):
 
 if __name__ == '__main__':
     # Define the target directory
+    """
     directory = "../../01_Data/SP500_data"
-
     run_nns(directory,'predicted_short_positions_SP500.txt')
    
     directory = "../../01_Data/NASDAQ_data"   
     run_nns(directory,'predicted_short_positions_NASDAQ.txt')    
+    """
+    
+    directory = "../../01_Data/SP600_data"   
+    run_nns(directory,'predicted_short_positions_SP600.txt') 

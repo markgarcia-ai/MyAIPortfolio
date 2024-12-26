@@ -3,7 +3,8 @@ import csv
 # List of input files
 input_files = [
     "predicted_short_positions_NASDAQ.txt",  # Replace with your file paths
-    "predicted_short_positions_SP500.txt"
+    "predicted_short_positions_SP500.txt",  # Replace with your file paths
+    "predicted_short_positions_SP600.txt"
 ]
 output_file = "Outout_stocks_combined.csv"  # Name of the resulting CSV file
 

@@ -1,0 +1,71 @@
+{
+    "last_updated": "26-12-2024 13:19:19",
+    "stocks": [
+        {
+            "Ticker": "DAN",
+            "Current Price": 11.789999961853027,
+            "buy at": 12.0,
+            "Sell at": 11,
+            "Quantity": 5,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        },
+        {
+            "Ticker": "MXL",
+            "Current Price": 20.280000686645508,
+            "buy at": 20.2,
+            "Sell at": 19,
+            "Quantity": 6,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        },
+        {
+            "Ticker": "JBLU",
+            "Current Price": 7.860000133514404,
+            "buy at": 7.0,
+            "Sell at": 6,
+            "Quantity": 4,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        },
+        {
+            "Ticker": "ADEA",
+            "Current Price": 13.739999771118164,
+            "buy at": 14.0,
+            "Sell at": 12,
+            "Quantity": 3,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        },
+        {
+            "Ticker": "CXM",
+            "Current Price": 8.930000305175781,
+            "buy at": 8.9,
+            "Sell at": 8,
+            "Quantity": 2,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        },
+        {
+            "Ticker": "BGS",
+            "Current Price": 7.099999904632568,
+            "buy at": 6.9,
+            "Sell at": 6,
+            "Quantity": 4,
+            "API Status": "No Action",
+            "Balance": 0,
+            "Spare1": 0,
+            "Spare2": 0
+        }
+    ]
+}

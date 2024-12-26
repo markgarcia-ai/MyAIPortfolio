@@ -2,6 +2,8 @@
 
 This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
 
+
+
 <div align="center">
   <h3>Flowchart process</h3>
   <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Page-3.drawio.png" width="100%" />
@@ -15,6 +17,14 @@ The output file is are in txt
 **3.Convert files to CSV** 03_Portfolios_Generation/02_Neural_Networks/02_01_ConvertToCSV.py <br>
 The output file is a single csv file combining all stocks
 **4.Create companies information document** Copy file csv file to 01_Data and run 01_Data/02_CompaniesData.py<br>
+
+
+08_Project/
+├── main_script.py       # The main script combining everything
+├── scripts/             # Folder containing other scripts
+│   ├── trading.py       # Contains trading-related logic
+│   ├── data_fetch.py    # Fetches market data
+│   ├── utils.py         # Utility functions
 
 
 
