@@ -1,0 +1,31 @@
+Symbol,Company Name,Sector,Market Cap,52-Week High,52-Week Low,Average Price,Previous Close
+MMM,3M Company,Industrials,70629294080,141.34,75.652176,116.03572,129.09
+AXP,American Express Company,Financial Services,210227511296,307.82,177.81,255.11415,296.79
+AMGN,Amgen Inc.,Healthcare,139371560960,346.85,253.3,304.60895,260.64
+AMZN,"Amazon.com, Inc.",Consumer Cyclical,2315613372416,233.0,144.53,189.9675,219.39
+AAPL,Apple Inc.,Technology,3685987909632,260.1,164.08,213.7592,250.42
+BA,The Boeing Company,Industrials,128589004800,250.19,137.03,169.6416,177.0
+CAT,Caterpillar Inc.,Industrials,173697662976,418.5,276.94,360.0159,362.76
+CVX,Chevron Corporation,Energy,261572198400,167.11,135.37,153.80695,144.84
+CSCO,"Cisco Systems, Inc.",Technology,235381112832,60.23,44.5,51.07725,59.2
+KO,The Coca-Cola Company,Consumer Defensive,266394353664,73.53,57.93,65.03435,62.26
+DIS,The Walt Disney Company,Communication Services,200688369664,123.74,83.91,102.25185,111.35
+GS,"The Goldman Sachs Group, Inc.",Financial Services,180488830976,612.73,372.07,492.35315,572.62
+HD,"The Home Depot, Inc.",Consumer Cyclical,385881800704,439.37,323.77,372.2539,388.99
+HON,Honeywell International Inc.,Industrials,146643697664,242.77,189.66,209.43484,225.89
+IBM,International Business Machines Corporation,Technology,203366416384,239.35,157.89,197.4889,219.83
+JNJ,Johnson & Johnson,Healthcare,346745470976,168.85,142.75,154.39114,144.62
+JPM,JPMorgan Chase & Co.,Financial Services,675681599488,254.31,164.3,212.59875,239.71
+MCD,McDonald's Corporation,Consumer Cyclical,209618534400,317.9,243.53,279.92465,289.89
+MRK,"Merck & Co., Inc.",Healthcare,250864386048,134.63,94.48,117.1196,99.48
+MSFT,Microsoft Corporation,Technology,3112092041216,468.35,366.5,425.17285,421.5
+NKE,"NIKE, Inc.",Consumer Cyclical,109657792512,107.43,70.75,83.7226,75.67
+NVDA,NVIDIA Corporation,Technology,3387211907072,152.89,48.306,118.11343,134.29
+PG,The Procter & Gamble Company,Consumer Defensive,390889537536,180.43,146.28,167.61604,167.65
+CRM,"Salesforce, Inc.",Technology,316441624576,369.0,212.0,282.22385,334.33
+SHW,The Sherwin-Williams Company,Basic Materials,83907346432,400.42,282.09,343.95734,339.93
+TRV,"The Travelers Companies, Inc.",Financial Services,54686609408,269.56,189.87,228.4002,240.89
+UNH,UnitedHealth Group Incorporated,Healthcare,464292511744,630.73,436.38,539.40375,505.86
+VZ,Verizon Communications Inc.,Communication Services,169269215232,45.36,37.56,41.3822,39.99
+V,Visa Inc.,Financial Services,608826163200,321.62,252.7,281.9994,316.04
+WMT,Walmart Inc.,Consumer Defensive,723005079552,96.18,51.86667,73.9881,90.35

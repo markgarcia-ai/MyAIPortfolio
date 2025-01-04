@@ -30,3 +30,15 @@ class StockDataManager:
 
         df.to_csv(self.csv_path, index=False)
         print(f"Updated stock data in {self.csv_path}")
+
+    def check_sell_at_stocks(self):
+        """
+        Check if stock shall be sold and return stock ticker and quantity
+        """
+        df = pd.read_csv(self.csv_path)
+        return True
+
+    def check_buy_at_stocks(self):
+        df = pd.read_csv(self.csv_path)
+        return True
+

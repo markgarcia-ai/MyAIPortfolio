@@ -1,0 +1,100 @@
+Symbol,Company Name,Sector,Market Cap,52-Week High,52-Week Low,Average Price,Previous Close
+ADBE,Adobe Inc.,Technology,194128199680,638.25,432.47,509.059,444.68
+AMD,"Advanced Micro Devices, Inc.",Technology,195759570944,227.3,117.9,153.12344,120.79
+ABNB,"Airbnb, Inc.",Consumer Cyclical,82145017856,170.1,110.38,140.03532,131.41
+GOOGL,Alphabet Inc.,Communication Services,2325461598208,201.42,130.67,169.6972,189.3
+GOOG,Alphabet Inc.,Communication Services,2325457403904,202.88,131.55,171.2017,190.44
+AMZN,"Amazon.com, Inc.",Consumer Cyclical,2315613372416,233.0,144.53,189.9675,219.39
+AEP,"American Electric Power Company, Inc.",Utilities,48964026368,105.18,75.22,93.55595,92.23
+AMGN,Amgen Inc.,Healthcare,139371560960,346.85,253.3,304.60895,260.64
+ADI,"Analog Devices, Inc.",Technology,104892375040,244.14,182.57,218.82954,212.46
+ANSS,"ANSYS, Inc.",Technology,29388447744,363.03,289.82,327.79654,337.33
+AAPL,Apple Inc.,Technology,3685987909632,260.1,164.08,213.7592,250.42
+AMAT,"Applied Materials, Inc.",Technology,133338554368,255.89,148.05,200.35445,162.63
+APP,AppLovin Corporation,Technology,114698633216,417.635,37.68,139.11115,323.83
+ARM,Arm Holdings plc,Technology,134738198528,188.75,66.52,135.59282,123.36
+ASML,ASML Holding N.V.,Technology,277691990016,1110.09,645.45,861.13965,693.08
+AZN,AstraZeneca PLC,Healthcare,204299796480,87.68,60.47,74.9184,65.52
+TEAM,Atlassian Corporation,Technology,63126351872,287.97,135.29,191.19287,243.38
+ADSK,"Autodesk, Inc.",Technology,63213101056,326.62,195.32,257.7738,295.57
+ADP,"Automatic Data Processing, Inc.",Technology,118019915776,309.63,231.27,266.915,292.73
+AXON,"Axon Enterprise, Inc.",Industrials,45485223936,698.67,241.72,393.9707,594.32
+BKR,Baker Hughes Company,Energy,41124704256,45.17,28.32,36.0238,41.02
+BIIB,Biogen Inc.,Healthcare,21857851392,259.93,145.07,198.80956,152.92
+BKNG,Booking Holdings Inc.,Consumer Cyclical,163010854912,5337.24,3180.0,4100.6724,4968.42
+AVGO,Broadcom Inc.,Technology,1087373770752,251.88,104.151,161.06339,231.84
+CDNS,"Cadence Design Systems, Inc.",Technology,81637130240,328.99,241.29,288.8906,300.46
+CDW,CDW Corporation,Technology,22658877440,263.37,168.43,217.25955,174.04
+CHTR,"Charter Communications, Inc.",Communication Services,49671983104,415.27,236.08,322.7489,342.77
+CTAS,Cintas Corporation,Industrials,73472581632,228.12,143.6375,190.20805,182.7
+CSCO,"Cisco Systems, Inc.",Technology,235381112832,60.23,44.5,51.07725,59.2
+CCEP,Coca-Cola Europacific Partners PLC,Consumer Defensive,36438491136,82.32,64.25,75.1577,76.81
+CTSH,Cognizant Technology Solutions Corporation,Technology,37885915136,82.46,63.79,73.54615,76.9
+CMCSA,Comcast Corporation,Communication Services,143189114880,47.11,36.43,40.1454,37.53
+CEG,Constellation Energy Corporation,Utilities,75877277696,288.753,109.44,216.06255,223.71
+CPRT,"Copart, Inc.",Industrials,54265896960,64.38,46.21,54.60515,57.39
+CSGP,"CoStar Group, Inc.",Real Estate,29037467648,100.38,68.26,79.3227,71.59
+COST,Costco Wholesale Corporation,Consumer Defensive,403863764992,1008.25,652.24,854.38635,916.27
+CRWD,"CrowdStrike Holdings, Inc.",Technology,85553668096,398.327,200.81,316.82144,342.16
+CSX,CSX Corporation,Industrials,62017986560,40.12,31.43,34.17645,32.27
+DDOG,"Datadog, Inc.",Technology,48794419200,170.08,98.8,125.08633,142.89
+DXCM,"DexCom, Inc.",Healthcare,30661707776,142.0,62.34,95.64345,77.77
+FANG,"Diamondback Energy, Inc.",Energy,48697925632,214.5,147.93,189.16985,163.83
+DASH,"DoorDash, Inc.",Communication Services,70887325696,181.78,93.53,135.66306,167.75
+EA,Electronic Arts Inc.,Communication Services,38265626624,168.5,124.92,143.15695,146.3
+EXC,Exelon Corporation,Utilities,37841899520,41.19,33.35,37.73755,37.64
+FAST,Fastenal Company,Industrials,40737923072,84.88,61.33,71.32925,71.91
+FTNT,"Fortinet, Inc.",Technology,72621424640,100.59,54.57,73.0995,94.48
+GEHC,GE HealthCare Technologies Inc.,Healthcare,35809701888,94.55,71.31,83.75088,78.18
+GILD,"Gilead Sciences, Inc.",Healthcare,114507276288,98.9,62.07,77.6322,92.37
+GFS,GlobalFoundries Inc.,Technology,23476783104,61.98,35.85,46.31775,42.91
+HON,Honeywell International Inc.,Industrials,146643697664,242.77,189.66,209.43484,225.89
+IDXX,"IDEXX Laboratories, Inc.",Healthcare,33478561792,583.39,398.5,477.333,413.44
+INTC,Intel Corporation,Technology,87208853504,50.3,18.51,27.33265,20.05
+INTU,Intuit Inc.,Technology,174329495552,714.78,557.29,632.97485,628.5
+ISRG,"Intuitive Surgical, Inc.",Healthcare,186648494080,556.23,321.31,459.50714,521.96
+KDP,Keurig Dr Pepper Inc.,Consumer Defensive,43080855552,38.28,28.62,33.89045,32.12
+KLAC,KLA Corporation,Technology,85154291712,896.32,542.41,731.1453,630.12
+KHC,The Kraft Heinz Company,Consumer Defensive,37206163456,38.96,30.01,34.31635,30.71
+LRCX,Lam Research Corporation,Technology,93207830528,113.0,68.87,86.52469,72.23
+LIN,Linde plc,Basic Materials,197210374144,487.49,396.07,451.1754,418.67
+LULU,Lululemon Athletica Inc.,Consumer Cyclical,45341401088,499.21,226.01,313.43835,382.41
+MAR,"Marriott International, Inc.",Consumer Cyclical,76267732992,295.45,204.55,249.48785,278.94
+MRVL,"Marvell Technology, Inc.",Technology,98263465984,126.15,53.19,77.1593,110.45
+MELI,"MercadoLibre, Inc.",Consumer Cyclical,89480912896,2161.73,1324.99,1793.1385,1700.44
+META,"Meta Platforms, Inc.",Communication Services,1512775352320,638.4,346.26,528.5903,585.51
+MCHP,Microchip Technology Incorporated,Technology,30545129472,100.57,55.27,81.05095,57.35
+MU,"Micron Technology, Inc.",Technology,97300463616,157.54,79.15,110.5651,84.16
+MSFT,Microsoft Corporation,Technology,3112092041216,468.35,366.5,425.17285,421.5
+MSTR,MicroStrategy Incorporated,Technology,73640157184,543.0,43.874,195.64891,289.62
+MDLZ,"Mondelez International, Inc.",Consumer Defensive,79562809344,77.2,58.9,68.413,59.73
+MDB,"MongoDB, Inc.",Technology,19602280448,509.62,212.74,288.4773,232.81
+MNST,Monster Beverage Corporation,Consumer Defensive,50872520704,61.23,43.32,52.15765,52.56
+NFLX,"Netflix, Inc.",Communication Services,379039809536,941.75,471.8,703.4434,891.32
+NVDA,NVIDIA Corporation,Technology,3387211907072,152.89,48.306,118.11343,134.29
+NXPI,NXP Semiconductors N.V.,Technology,52409511936,296.08,201.58,244.9791,207.85
+ORLY,"O'Reilly Automotive, Inc.",Consumer Cyclical,68567326720,1283.96,914.5,1117.9597,1185.8
+ODFL,"Old Dominion Freight Line, Inc.",Industrials,37518004224,233.26,165.49,196.42615,176.4
+ON,ON Semiconductor Corporation,Technology,26275932160,85.16,59.34,70.73255,63.05
+PCAR,PACCAR Inc,Industrials,54223208448,125.5,90.04,106.4757,104.02
+PLTR,Palantir Technologies Inc.,Technology,171284332544,84.797,15.664,36.89885,75.63
+PYPL,"PayPal Holdings, Inc.",Financial Services,86398902272,93.66,55.77,71.40065,85.35
+PDD,PDD Holdings Inc.,Consumer Cyclical,134557925376,164.69,88.01,124.58345,96.99
+PEP,"PepsiCo, Inc.",Consumer Defensive,206086635520,183.41,149.71,169.43265,152.06
+QCOM,QUALCOMM Incorporated,Technology,170694049792,230.63,135.85,175.88855,153.62
+REGN,"Regeneron Pharmaceuticals, Inc.",Healthcare,78592229376,1211.2,693.0,972.20197,712.33
+ROP,"Roper Technologies, Inc.",Technology,55093186560,580.09,508.22,546.1995,519.85
+ROST,"Ross Stores, Inc.",Consumer Cyclical,50347167744,163.6,127.53,144.42876,151.27
+SBUX,Starbucks Corporation,Consumer Cyclical,104502337536,103.32,71.55,88.1795,91.25
+SNPS,"Synopsys, Inc.",Technology,74622525440,629.38,457.52,542.93304,485.36
+TTWO,"Take-Two Interactive Software, Inc.",Communication Services,32152037376,191.91,135.24,158.67854,184.08
+TMUS,"T-Mobile US, Inc.",Communication Services,254762369024,248.15,158.84,194.4118,220.73
+TSLA,"Tesla, Inc.",Consumer Cyclical,1217511555072,488.54,138.8,239.8647,403.84
+TXN,Texas Instruments Incorporated,Technology,170538975232,220.39,155.46,194.23955,187.51
+TTD,"The Trade Desk, Inc.",Technology,58108469248,141.53,61.475,103.94075,117.53
+VRSK,"Verisk Analytics, Inc.",Industrials,38605680640,296.58,217.34,263.5195,275.43
+VRTX,Vertex Pharmaceuticals Incorporated,Healthcare,104494964736,519.88,377.85,457.44305,402.7
+WBD,"Warner Bros. Discovery, Inc.",Communication Services,26150791168,12.7,6.64,8.3944,10.57
+WDAY,"Workday, Inc.",Technology,66989441024,311.28,199.81,245.4383,258.03
+XEL,Xcel Energy Inc.,Utilities,38393819136,73.38,46.79,60.01975,67.52
+ZS,"Zscaler, Inc.",Technology,27873730560,259.61,153.45,185.1583,180.41

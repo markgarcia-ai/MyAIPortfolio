@@ -1,0 +1,7 @@
+Markets,Last update,root file,Total stocks in root file,Csv stocks in folder,Folder
+SP500,3/Jan/2025,sp500_stocks.csv,503,503,SP500_data
+NASDAQ,3/Jan/2025,nasdaq_stocks.csv,101,104,NASDAQ_data
+SP600,3/Jan/2025,sp600_stocks.csv,602,597,SP600_data
+Dow jones,3/Jan/2025,,30,30,DJIA_data
+Russell 2000,3/Jan/2025,,,,
+NYSE,3/Jan/2025,nyse_tickers.csv,401,692,nyse_data

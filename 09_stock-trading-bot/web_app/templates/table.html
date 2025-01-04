@@ -4,52 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Data</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Stock Data</h1>
-    <p><strong>Last Updated:</strong> {{ data['last_updated'] }}</p>
+    <div class="container mt-4">
+        <h1 class="text-center">Stock Data</h1>
+        <p><strong>Last Updated:</strong> {{ data['last_updated'] }}</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Ticker</th>
-                <th>Current Price</th>                
-                <th>Buy At</th>
-                <th>Sell At</th>
-                <th>Quantity</th>
-                <th>API Status</th>
-                <th>Balance</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for stock in data['stocks'] %}
-            <tr>
-                <td>{{ stock['Ticker'] }}</td>
-                <td>{{ stock['Current Price'] }}</td>                
-                <td>{{ stock['buy at'] }}</td>
-                <td>{{ stock['Sell at'] }}</td>
-                <td>{{ stock['Quantity'] }}</td>
-                <td>{{ stock['API Status'] }}</td>
-                <td>{{ stock['Balance'] }}</td>                
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        <!-- IKBR Account Information -->
+        <h2 class="mt-4">Interactive Brokers Account Information</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Account ID</th>
+                        <th>Account Type</th>
+                        <th>Account Currency</th>
+                        <th>Account Balance</th>
+                        <th>Margin Available</th>
+                        <th>Net Liquidation Value</th>
+                        <th>Open Positions</th>
+                        <th>Open Orders</th>
+                        <th>Reserved Funds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ data['ikbr_account']['Account ID'] }}</td>
+                        <td>{{ data['ikbr_account']['Account Type'] }}</td>
+                        <td>{{ data['ikbr_account']['Account Currency'] }}</td>
+                        <td>{{ data['ikbr_account']['Account Balance'] }}</td>
+                        <td>{{ data['ikbr_account']['Margin Available'] }}</td>
+                        <td>{{ data['ikbr_account']['Net Liquidation Value'] }}</td>
+                        <td>{{ data['ikbr_account']['Open Positions'] }}</td>
+                        <td>{{ data['ikbr_account']['Open Orders'] }}</td>
+                        <td>{{ data['ikbr_account']['Reserved Funds'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Stock Data -->
+        <h2 class="mt-4">Stock Data</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Current Price</th>
+                        <th>Buy At</th>
+                        <th>Sell At</th>
+                        <th>Quantity</th>
+                        <th>API Status</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in data['stocks'] %}
+                    <tr>
+                        <td>{{ stock['Ticker'] }}</td>
+                        <td>{{ "%.3f" | format(stock['Current Price']) }}</td> <!-- Format to 3 decimal places -->
+                        <td>{{ stock['buy at'] }}</td>
+                        <td>{{ stock['Sell at'] }}</td>
+                        <td>{{ stock['Quantity'] }}</td>
+                        <td>{{ stock['API Status'] }}</td>
+                        <td>{{ stock['Balance'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mt-4"><strong>Portfolio Value:</strong> {{ data['datax'] }}</p>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -22,3 +22,15 @@ class ActionExecutor:
             response = requests.post(self.api_url, json=action, headers={"Authorization": f"Bearer {self.api_key}"})
             print(f"Executed action: {action}, Response: {response.status_code}")
         return self.actions
+    
+    def execute_buy(self):
+        """
+        Need to check balance, how many to buy etc?
+        """
+        pass
+
+    def execute_sell(self):
+        """
+        Need to check balance, how many to sell etc?
+        """
+        pass

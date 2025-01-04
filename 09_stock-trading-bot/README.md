@@ -1,6 +1,8 @@
 
 ## Modules Overview
 
+Key file is in data/portfolio_ikbr.csv
+
 ### 1. `StockDataManager`
 
 **Location:** `modules/stock_data_manager.py`

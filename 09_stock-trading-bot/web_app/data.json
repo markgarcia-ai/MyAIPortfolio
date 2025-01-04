@@ -1,71 +1,40 @@
 {
-    "last_updated": "26-12-2024 13:19:19",
+    "last_updated": "27-12-2024 18:09:24",
     "stocks": [
         {
-            "Ticker": "DAN",
-            "Current Price": 11.789999961853027,
-            "buy at": 12.0,
-            "Sell at": 11,
-            "Quantity": 5,
+            "Ticker": "VNCE",
+            "Current Price": 3.369999885559082,
+            "buy at": 3.2,
+            "Sell at": 4.2,
+            "Quantity": 40,
             "API Status": "No Action",
             "Balance": 0,
-            "Spare1": 0,
+            "Spare1": 3.65,
             "Spare2": 0
         },
         {
-            "Ticker": "MXL",
-            "Current Price": 20.280000686645508,
-            "buy at": 20.2,
-            "Sell at": 19,
-            "Quantity": 6,
+            "Ticker": "PERF",
+            "Current Price": 2.442800045013428,
+            "buy at": 2.1,
+            "Sell at": 3.2,
+            "Quantity": 40,
             "API Status": "No Action",
             "Balance": 0,
-            "Spare1": 0,
-            "Spare2": 0
-        },
-        {
-            "Ticker": "JBLU",
-            "Current Price": 7.860000133514404,
-            "buy at": 7.0,
-            "Sell at": 6,
-            "Quantity": 4,
-            "API Status": "No Action",
-            "Balance": 0,
-            "Spare1": 0,
-            "Spare2": 0
-        },
-        {
-            "Ticker": "ADEA",
-            "Current Price": 13.739999771118164,
-            "buy at": 14.0,
-            "Sell at": 12,
-            "Quantity": 3,
-            "API Status": "No Action",
-            "Balance": 0,
-            "Spare1": 0,
-            "Spare2": 0
-        },
-        {
-            "Ticker": "CXM",
-            "Current Price": 8.930000305175781,
-            "buy at": 8.9,
-            "Sell at": 8,
-            "Quantity": 2,
-            "API Status": "No Action",
-            "Balance": 0,
-            "Spare1": 0,
-            "Spare2": 0
-        },
-        {
-            "Ticker": "BGS",
-            "Current Price": 7.099999904632568,
-            "buy at": 6.9,
-            "Sell at": 6,
-            "Quantity": 4,
-            "API Status": "No Action",
-            "Balance": 0,
-            "Spare1": 0,
+            "Spare1": 2.5,
             "Spare2": 0
         }
-    ]
+    ],
+    "ikbr_account": {
+        "Account ID": "U1234567",
+        "Account Type": "Individual",
+        "Account Currency": "USD",
+        "Account Balance": 10000.0,
+        "Margin Available": 5000.0,
+        "Net Liquidation Value": 15000.0,
+        "Open Positions": 2,
+        "Open Orders": 1,
+        "Reserved Funds": 0.0,
+        "Spare1": 0,
+        "Spare2": 0
+    }
 }
