@@ -19,12 +19,8 @@ functions_to_run = {
     "Test": [("function0", "Disable")],
     "00_Generate_markets": [("function01", "Disable")],
     "01_Update_markets": [("function1", "Disable")],
-    "02_Neural_Networks_Allstocks": [("function2", "Disable")],
-    "02_Stock_changes": [("function2_1", "Enable")],    
-    "03_ConvertToCSV": [("function3", "Disable")],
-    "04_CompaniesData": [("function4", "Disable")],
-    "05_Stock_selection": [("function5", "Disable")],
-    "06_Automated_trading": [("function6", "Disable")]
+    "02_Stock_changes": [("function2", "Disable")], 
+    "03_Generate_portfolio": [("function3", "Enable")]
 }
 
 def run_specific_functions_with_timer(functions_to_run):

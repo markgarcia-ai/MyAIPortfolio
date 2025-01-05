@@ -206,7 +206,7 @@ def ensure_csv_exists(file_path, columns):
         print(f"CSV file already exists: {file_path}")
 
 
-def function2_1():
+def function2():
     # List of input CSV files and corresponding folder paths
     folder_csv = "root_csv_files/"
     input_csvs = [folder_csv + "dow_jones_stocks.csv",folder_csv + "nyse_tickers.csv",folder_csv + "nasdaq_stocks.csv",folder_csv + "sp500_stocks.csv",folder_csv + "sp600_stocks.csv"]  # Add your input CSVs here

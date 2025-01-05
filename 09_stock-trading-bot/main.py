@@ -3,14 +3,27 @@ from modules.portfolio_data_manager import StockDataManager
 from modules.IBKR_Manager import IBKRManager
 from modules.portfolio_executor import ActionExecutor
 from modules.account_manager import AccountManager
+from modules.broker_simulator import BrokerSimulator
+from modules.trading_bot import TradingBot
 
 import time
+
+
+def basic():
+    print("Running basic...")
+    csv_path = "portfolio.csv"  # Path to the CSV file
+    broker_simulator = BrokerSimulator("broker_simulator.json")
+
+    bot = TradingBot(csv_path, broker_simulator)
+    bot.run()
+
 
 
 def main():
     file_path = "data/portfolio_ikbr.csv"
     IBKR_account = IBKRManager()
     stock_manager = StockDataManager(file_path)
+    print(f"{stock_manager}")
     Transactions_manager = ActionExecutor(file_path,"xxx","xxx","xxx")
     Notifier_manager = Notifier(file_path,Account_details)
     Portfolio_manager = AccountManager("BalanceFromIKBR")
@@ -40,4 +53,5 @@ def main():
         print("Main has ended.")
 
 if __name__ == "__main__":
-    main()
+    #main()
+    basic()

@@ -3,6 +3,10 @@
 
 Key file is in data/portfolio_ikbr.csv
 
+To run at the same time the trading bot and website the script run_parallel.py must be run. Two main scripts: <br>
+**main.py**
+**web_app/app.py**
+
 ### 1. `StockDataManager`
 
 **Location:** `modules/stock_data_manager.py`

@@ -246,7 +246,7 @@ def download_nyse_data_from_csvs(csv_folder, start_date, end_date, output_folder
             print(f"Error downloading data for {ticker}: {e}")
 
 
-def function1():
+def function0():
     print("Starting data fetching and processing...")
     markets = {
         'sp500': {

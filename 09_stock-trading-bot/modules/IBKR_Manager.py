@@ -30,14 +30,35 @@ class IBKRManager:
         Retrieve account summary information.
 
         Returns:
-            dict: Account summary data.
+            list: Account summary data as a list of dictionaries.
         """
         try:
             account_summary = self.ib.accountSummary()
-            return util.tree(account_summary)
+            # Convert AccountValue objects to dictionaries
+            return [{'account': item.account,
+                     'tag': item.tag,
+                     'value': item.value,
+                     'currency': item.currency}
+                    for item in account_summary]
         except Exception as e:
             print(f"Error retrieving account summary: {e}")
-            return {}
+            return []
+
+    def get_value_by_tag(self, tag_name):
+        """
+        Retrieve the value of a specific tag from the account summary.
+
+        Args:
+            tag_name (str): The tag name to look for (e.g., 'AccountType').
+
+        Returns:
+            str: The value associated with the tag, or None if not found.
+        """
+        account_summary = self.get_account_summary()
+        for entry in account_summary:
+            if entry['tag'] == tag_name:
+                return entry['value']
+        return None
 
     def get_portfolio(self):
         """
