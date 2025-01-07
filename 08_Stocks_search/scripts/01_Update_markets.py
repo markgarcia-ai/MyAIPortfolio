@@ -272,6 +272,6 @@ def function1():
     #update_markets_stock_data(folder_path)
     folders = ["Market_DJIA_data", "Market_NASDAQ_data","Market_nyse_data","Market_SP500_data","Market_SP600_data"]  # Replace with your folder paths
     update_ticker_data(folders)
-    market_summary_path = "market_summary.csv"
-    market_summary = pd.read_csv(market_summary_path)
-    update_market_summary(market_summary_path, market_summary)    
+    #market_summary_path = "market_summary.csv"
+    #market_summary = pd.read_csv(market_summary_path)
+    #update_market_summary(market_summary_path, market_summary)    

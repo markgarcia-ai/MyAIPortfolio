@@ -1,5 +1,5 @@
 import json
-import datetime
+from datetime import datetime
 
 class BrokerSimulator:
     def __init__(self, json_file):

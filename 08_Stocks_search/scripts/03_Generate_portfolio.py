@@ -29,9 +29,9 @@ def process_top_20_stocks(input_csv, output_csv):
         current_date = datetime.now().strftime('%Y-%m-%d')
 
         # Calculate 'buy at' and 'stop loss'
-        top_20['buy at'] = top_20['Last Value'] + ((2/ 100) * top_20['Last Value'])
-        top_20['stop loss'] = top_20['Last Value'] * 0.8
-
+        top_20.loc[:, 'buy at'] = top_20['Last Value'] + ((2 / 100) * top_20['Last Value'])
+        top_20.loc[:, 'stop loss'] = top_20['Last Value'] * 0.8
+        
         # Create a DataFrame for the output format
         output_df = pd.DataFrame({
             'Ticker': top_20['Ticker'],

@@ -207,24 +207,54 @@ def ensure_csv_exists(file_path, columns):
 
 
 def function2():
-    # List of input CSV files and corresponding folder paths
+    # Root folder for input CSV files
     folder_csv = "root_csv_files/"
-    input_csvs = [folder_csv + "dow_jones_stocks.csv",folder_csv + "nyse_tickers.csv",folder_csv + "nasdaq_stocks.csv",folder_csv + "sp500_stocks.csv",folder_csv + "sp600_stocks.csv"]  # Add your input CSVs here
-    folder_paths = ["Market_DJIA_data","Market_NASDAQ_data","Market_nyse_data","Market_SP500_data", "Market_SP600_data"]  # Add corresponding folder paths here
-    output_csv = "combined_percentage_changes.csv"  # Output CSV file
-    filtered_output_csv = "filtered_stocks.csv"  # Final filtered CSV file
 
-    # Specify the time frame
-    start_date = "2024-11-20"  # Example start date (YYYY-MM-DD)
-    end_date = "2025-01-03"    # Example end date (YYYY-MM-DD)
+    # List of input CSV files and corresponding folder paths
+    input_csvs = [
+        folder_csv + "dow_jones_stocks.csv",
+        folder_csv + "nasdaq_stocks.csv",        
+        folder_csv + "nyse_tickers.csv",
+        folder_csv + "sp500_stocks.csv",
+        folder_csv + "sp600_stocks.csv"
+    ]
 
-    # Specify the filtering criteria
-    min_value = 1  # Minimum stock value (First Value)
+    folder_paths = [
+        "Market_DJIA_data",
+        "Market_NASDAQ_data",
+        "Market_NYSE_data",        
+        "Market_SP500_data",
+        "Market_SP600_data"
+    ]
+
+    # Output files
+    output_csv = "combined_percentage_changes.csv"
+    filtered_output_csv = "filtered_stocks.csv"
+
+    # Time frame for processing
+    start_date = "2024-11-20"  # Start date (YYYY-MM-DD)
+    end_date = "2025-01-06"    # End date (YYYY-MM-DD)
+
+    # Filtering criteria
+    min_value = 1   # Minimum stock value (First Value)
     max_value = 20  # Maximum stock value (Last Value)
 
-    # Process the tickers and calculate percentage changes
-    process_tickers(input_csvs, folder_paths, output_csv, start_date, end_date)
-    
-    # Filter the output CSV based on criteria
-    filter_output_csv(output_csv, filtered_output_csv, min_value, max_value)
+    # Step 1: Process the tickers and calculate percentage changes
+    process_tickers(
+        input_csvs=input_csvs,
+        folder_paths=folder_paths,
+        output_csv=output_csv,
+        start_date=start_date,
+        end_date=end_date
+    )
+
+    # Step 2: Filter the output CSV based on the defined criteria
+    filter_output_csv(
+        input_csv=output_csv,
+        output_csv=filtered_output_csv,  # Corrected to match the function signature
+        min_value=min_value,
+        max_value=max_value
+    )
+
+
 

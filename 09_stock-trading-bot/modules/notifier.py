@@ -14,10 +14,19 @@ class Notifier:
         try:
             # Read the CSV file
             df = pd.read_csv(self.csv_path)
-            # Ensure correct column names and format
-            df.columns = [
-                "Ticker", "Current Price", "buy at", "Sell at", "Quantity", "API Status", "Balance", "Spare1", "Spare2"
+            df = df.loc[:, ~df.columns.duplicated()]  # Remove duplicate columns
+
+            # Ensure correct column names
+            expected_columns = [
+                "Ticker", "Current Price", "Buy at", "Sell at", "Stop Loss", "Quantity", 
+                "API Status", "Balance", "Bought at", "Spare 2", "Last Update", "Spare 1", "Quantity (Duplicate)"
             ]
+            
+            if len(df.columns) == len(expected_columns):
+                df.columns = expected_columns
+            else:
+                raise ValueError(f"Expected {len(expected_columns)} columns, but found {len(df.columns)}")
+
             # Convert the DataFrame to a JSON-friendly format
             stocks_data = df.to_dict(orient='records')
 

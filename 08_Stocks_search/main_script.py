@@ -18,9 +18,10 @@ folders = ["scripts"]
 functions_to_run = {
     "Test": [("function0", "Disable")],
     "00_Generate_markets": [("function01", "Disable")],
-    "01_Update_markets": [("function1", "Disable")],
-    "02_Stock_changes": [("function2", "Disable")], 
-    "03_Generate_portfolio": [("function3", "Enable")]
+    "01_Update_markets": [("function1", "Enable")],
+    "02_Stock_changes": [("function2", "Enable")], 
+    "03_Generate_portfolio": [("function3", "Enable")], 
+    "04_Compute_summary": [("function4", "Disable")]
 }
 
 def run_specific_functions_with_timer(functions_to_run):

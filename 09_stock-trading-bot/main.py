@@ -1,22 +1,33 @@
 from modules.notifier import Notifier
 from modules.portfolio_data_manager import StockDataManager
-from modules.IBKR_Manager import IBKRManager
+#from modules.IBKR_Manager import IBKRManager
 from modules.portfolio_executor import ActionExecutor
 from modules.account_manager import AccountManager
 from modules.broker_simulator import BrokerSimulator
 from modules.trading_bot import TradingBot
 
 import time
+import keyboard
 
 
 def basic():
     print("Running basic...")
     csv_path = "portfolio.csv"  # Path to the CSV file
+    file_path = "data/portfolio_ikbr.csv"
     broker_simulator = BrokerSimulator("broker_simulator.json")
 
-    bot = TradingBot(csv_path, broker_simulator)
-    bot.run()
+    print("Press 'q' to quit.")
+    while True:
+        bot = TradingBot(csv_path, broker_simulator)
+        bot.run()
+        time.sleep(2)
+        Account_details = broker_simulator.load_data()
+        Notifier_manager = Notifier(file_path,Account_details)
+        Notifier_manager.create_json_from_csv()
 
+        if keyboard.is_pressed("q"):
+            print("Exiting...")
+            break
 
 
 def main():

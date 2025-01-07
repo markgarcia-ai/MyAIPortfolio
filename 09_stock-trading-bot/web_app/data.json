@@ -6,22 +6,28 @@
             "Current Price": 3.369999885559082,
             "buy at": 3.2,
             "Sell at": 4.2,
+            "Stop Loss": 3.0,
             "Quantity": 40,
             "API Status": "No Action",
             "Balance": 0,
-            "Spare1": 3.65,
-            "Spare2": 0
+            "Bought at": 3.65,
+            "Spare2": 0,
+            "Last Update": "2025-01-05",
+            "Spare1": 0.0
         },
         {
             "Ticker": "PERF",
             "Current Price": 2.442800045013428,
             "buy at": 2.1,
             "Sell at": 3.2,
+            "Stop Loss": 2.0,
             "Quantity": 40,
             "API Status": "No Action",
             "Balance": 0,
-            "Spare1": 2.5,
-            "Spare2": 0
+            "Bought at": 2.5,
+            "Spare2": 0,
+            "Last Update": "2025-01-05",
+            "Spare1": 0.0
         }
     ],
     "ikbr_account": {
