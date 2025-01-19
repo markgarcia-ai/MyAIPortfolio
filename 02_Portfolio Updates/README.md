@@ -2,6 +2,23 @@
 
 This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
 
+## TO DO LIST
+**1.Basic portfolio:**Create portfolio based on your current investemnts <br>
+
+## Steps to make it run.
+It's divided in two big functions <br>
+**1.Stock search:** Main script is in 08_Stock_search/main_scrip.py, which is divided in 5 main functions and need to be enabled in the main script<br>
+00_Generate_markets : Download basic stock csv information for a specific market.For new markets, a root csv file shall be created with the basic market information such as Symbiol, company names, etc...   <br>
+01_Update_markets.py : Updaye existing csv tickers files with latest csv stock data. MANDATORY RUN FOR UPDATES. <br>
+02_Stock_changes.py : xxx <br>
+03_Generate_portfolio.py : xxx <br>
+04_Compute_summary.py : xxx <br>
+
+**2.Trading Bot:** Main script to activate trading bot and allow transaction<br>
+
+
+## Flow diagram for full integration
+
 <div align="center">
   <h3>Flowchart process</h3>
   <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Page-3.drawio.png" width="100%" />
