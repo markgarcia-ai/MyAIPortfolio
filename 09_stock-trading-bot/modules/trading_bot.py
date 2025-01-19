@@ -14,6 +14,7 @@ class TradingBot:
         """
         Main trading bot logic.
         """
+        API_response = 0 #Simulates API response from market trading
         # Step 1: Update current prices
         self.stock_manager.update_current_prices()
 
@@ -31,7 +32,8 @@ class TradingBot:
                     price=signal['Current Price']
                 )
                 if success:
-                    print(f"Successfully bought {signal['Quantity']} of {signal['Ticker']}")
+                    API_response = 1
+                    #print(f"Successfully bought {signal['Quantity']} of {signal['Ticker']}")
 
         # Step 4: Check sell signals
         sell_signals = self.stock_manager.get_sell_signals()

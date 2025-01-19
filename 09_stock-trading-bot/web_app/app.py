@@ -29,7 +29,7 @@ def get_data():
     return jsonify(data)
 
 if __name__ == "__main__":
-    port = 5004
+    port = 5005
     if len(sys.argv) > 1:
         try:
             port = int(sys.argv[1])

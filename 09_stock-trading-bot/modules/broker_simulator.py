@@ -56,8 +56,8 @@ class BrokerSimulator:
             "price": price,
             "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
-        self.data["trades"].append(trade)
-        self.save_data()
+        #self.data["trades"].append(trade)
+        #self.save_data()
         print(f"Trade executed: {trade}")
         return True
 

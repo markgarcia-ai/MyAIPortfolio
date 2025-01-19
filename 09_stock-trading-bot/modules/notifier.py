@@ -19,7 +19,7 @@ class Notifier:
             # Ensure correct column names
             expected_columns = [
                 "Ticker", "Current Price", "Buy at", "Sell at", "Stop Loss", "Quantity", 
-                "API Status", "Balance", "Bought at", "Spare 2", "Last Update", "Spare 1", "Quantity (Duplicate)"
+                "API Status", "Balance", "Bought at", "Spare 2", "Last Update", "Spare 1"
             ]
             
             if len(df.columns) == len(expected_columns):
