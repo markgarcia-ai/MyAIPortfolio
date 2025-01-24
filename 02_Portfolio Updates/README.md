@@ -1,4 +1,5 @@
 # MyAIPortfolio description
+LAST UPDATE : 19th Jan 2025
 
 This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
 
