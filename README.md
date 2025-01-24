@@ -1,32 +1,29 @@
 # MyAIPortfolio description
 
+LAST UPDATE : 19th Jan 2025
+
 This is my AI-driven portfolio management system which follows a combine advanced data analytics, machine learning, and optimization to dynamically manage and adapt to changing market conditions. Below is the flowchart:
 
+## TO DO LIST
+**1.Basic portfolio:**Create portfolio based on your current investemnts <br>
 
+## Steps to make it run.
+It's divided in two big functions <br>
+**1.Stock search:** Main script is in 08_Stock_search/main_scrip.py, which is divided in 5 main functions and need to be enabled in the main script<br>
+00_Generate_markets : Download basic stock csv information for a specific market.For new markets, a root csv file shall be created with the basic market information such as Symbiol, company names, etc...   <br>
+01_Update_markets.py : Updaye existing csv tickers files with latest csv stock data. MANDATORY RUN FOR UPDATES. <br>
+02_Stock_changes.py : xxx <br>
+03_Generate_portfolio.py : xxx <br>
+04_Compute_summary.py : xxx <br>
+
+**2.Trading Bot:** Main script to activate trading bot and allow transaction<br>
+
+## Flow diagram for full integration
 
 <div align="center">
   <h3>Flowchart process</h3>
   <img src="https://github.com/markgarcia-ai/MyAIPortfolio/blob/main/00_Assets/01_Images/AI_Portfolio-Page-3.drawio.png" width="100%" />
 </div>
-
-## [0] Curent scripts sequences: 
-
-**1.Download stock market info** 01_Data/01_download_data.py <br>
-**2.Run NN for short position stocks** 03_Portfolios_Generation/02_Neural_Networks/02_Neural_Networks_AllStocks.py <br>
-The output file is are in txt
-**3.Convert files to CSV** 03_Portfolios_Generation/02_Neural_Networks/02_01_ConvertToCSV.py <br>
-The output file is a single csv file combining all stocks
-**4.Create companies information document** Copy file csv file to 01_Data and run 01_Data/02_CompaniesData.py<br>
-
-
-08_Project/
-├── main_script.py       # The main script combining everything
-├── scripts/             # Folder containing other scripts
-│   ├── trading.py       # Contains trading-related logic
-│   ├── data_fetch.py    # Fetches market data
-│   ├── utils.py         # Utility functions
-
-
 
 ## [1] Trading with momentum -> Trading signals branch
 **1.Methodology:** Momentum trading involves identifying assets that have shown strong price movements and assuming they will continue in the same direction. It’s often quantified through indicators like moving averages, relative strength index (RSI), or MACD. <br>
