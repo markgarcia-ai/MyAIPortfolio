@@ -1,11 +1,14 @@
 
 ## Modules Overview
 
-Key file is in data/portfolio_ikbr.csv
+Key file is in data/portfolio_XXXXXXX.csv
 
 To run at the same time the trading bot and website the script run_parallel.py must be run. Two main scripts: <br>
 **main.py**
 **web_app/app.py**
+
+The file fetch from website to display data is in /web_app/data.json
+The file is generated in the next function -> 
 
 ### 1. `StockDataManager`
 

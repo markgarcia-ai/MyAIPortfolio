@@ -44,7 +44,7 @@ class Notifier:
                 "Spare1": 0,
                 "Spare2": 0
             }
-
+            print(f"{ikbr_account_info}")
             # Compile the final JSON data
             data = {
                 "last_updated": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),

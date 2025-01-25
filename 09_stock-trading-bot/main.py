@@ -11,8 +11,8 @@ import time
 
 def basic():
     print("Running basic...")
-    csv_path = "data/portfolio_2025_01_07.csv"  # Path to the CSV file
-    file_path = "data/portfolio_2025_01_07.csv"
+    csv_path = "data/portfolio_barclays_original.csv"  # Path to the CSV file
+    file_path = "data/portfolio_barclays_original.csv"
     broker_simulator = BrokerSimulator("broker_simulator.json")
 
 
