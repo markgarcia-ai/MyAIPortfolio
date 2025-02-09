@@ -1,0 +1,16 @@
+*Main function steps
+1-Load IBKR data for balance, stocks, etc...
+2-update cvs stock data details -> StockDataManager
+3-Update stock current prices in the cvs file.
+4-Check if there is a buy or sell action based on current prices
+5-If there is, send API requests. -> ActionExecutor 
+6-Create json file to send information to website
+
+
+*Things to do
+
+-Implement IBKR API -> Get account information. 
+-Implement a trading strategy -> create the stocks.csv file and transactions
+-Loop through the stocks.csv file and make transactions
+-Update the portfolio_ikbr.csv file with the new information
+-Updare website information. 

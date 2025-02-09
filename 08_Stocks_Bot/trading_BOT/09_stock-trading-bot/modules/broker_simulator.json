@@ -1,0 +1,6 @@
+{
+    "broker_name": "Simulated Broker",
+    "account_id": "12345",
+    "balance": 100000.0,
+    "trades": []
+}
